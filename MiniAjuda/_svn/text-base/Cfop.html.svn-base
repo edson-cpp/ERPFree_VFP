@@ -1,0 +1,231 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Cfop_arquivos/filelist.xml">
+<title>Procedimentos básicos</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:272713776;
+	mso-list-template-ids:801135280;}
+@list l1
+	{mso-list-id:305932531;
+	mso-list-template-ids:1107174514;}
+@list l1:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:1227107495;
+	mso-list-template-ids:-1178331262;}
+@list l2:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:1232499415;
+	mso-list-template-ids:-708165536;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Procedimentos básicos.</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>Botões:</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Cadastro de Código Fiscal de Operações e Prestações (CFOP)<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Novo/Salvar – Cria um novo cadastro. / Grava as
+     informações do registro.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Alterar/Cancelar – Habilita os campos para alterações
+     no registro selecionado. / Cancela o cadastro corrente.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Localizar – Localiza a partir da lista de
+     registros.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Excluir – Exclui o registro selecionado.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Primeiro( |&lt; ) – Navega para o primeiro
+     registro.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Anterior( &lt; ) – Navega para o registro anterior.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Próximo( &gt; ) – Navega para o próximo registro.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Último( &gt;| ) – Navega para o último registro.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Fechar – Fecha a tela de cadastro<i>.</i></span></li>
+</ol>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>Funções:</span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>No campo código do cfop pressione <i>F5</i> ou <i>Clique
+     Duplo</i> no mouse para localizar por descrição.</span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Ctrl + Home – Navega para o primeiro registro.</span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Ctrl + Page Up – Navega para o registro anterior.</span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Ctrl + Page Down – Navega para o próximo
+     registro.</span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Ctrl + End – Navega para o último registro.</span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Os botões tem atalhos para agilizar os
+     procedimentos. Ex. Botão <u>F</u>echar, o F de Fechar é sublinhado, isso
+     indica que esta tecla combinada com a tecla de <i>Alt</i> aciona este
+     botão, isto funciona para todos os botões. Pressionar Alt+F
+     simultaneamente é o mesmo que clicar no botão Fechar.</span></li>
+</ol>
+
+</div>
+
+</body>
+
+</html>

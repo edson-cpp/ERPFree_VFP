@@ -1,0 +1,42 @@
+LOCAL lnHorizOff, lnVertOff, lnNewWidth, lnNewHeight
+LOCAL lnNewLeft, lnNewTop, lnFmIdx
+ 
+lnHorizOff = Sysmetric(9) && horizontal offset
+lnVertOff = Sysmetric(9) && vertical offset
+
+lnNewWidth = 0.75 * _SCREEN.Width && new form width
+lnNewHeight = 0.75 * _SCREEN.Height && new form height
+ 
+lnNewLeft = 0
+lnNewTop = 40
+ 
+FOR lnFmIdx = _SCREEN.FormCount TO 1 STEP -1
+	IF NOT _SCREEN.Forms(lnFmIdx).Name = "FRMMAIN"
+		WITH _SCREEN.Forms(lnFmIdx)
+			IF Type(".BorderStyle")<>"U" AND .BorderStyle = 3
+				* Form tem borda redimensionável, ajusta a dimensão
+				* subject to its min/max height and width
+				.Width = IIF(.MinWidth = -1,lnNewWidth,Max(lnNewWidth,.MinWidth))
+				.Width = IIF(.MaxWidth = -1,lnNewWidth,Min(lnNewWidth,.MaxWidth))
+				.Height = IIF(.MinHeight = -1,lnNewHeight,Max(lnNewHeight,.MinHeight))
+				.Height = IIF(.MaxHeight = -1,lnNewHeight,Min(lnnewHeight,.MaxHeight))
+			ENDIF
+
+			* move o form para sua nova posição
+			IF (lnNewTop + .Height < _SCREEN.Height) AND (lnNewLeft + .Width < _SCREEN.Width)
+				* o form não saíra dos limites da janela principal,
+				* so go ahead and move it
+				.Move(lnNewLeft,lnNewTop)
+				* calculate the position of the next form
+				lnNewLeft = lnNewLeft + lnHorizOff
+				lnNewTop = lnNewTop + lnVertOff
+			ELSE
+				* form does overflow, so go back to 
+				* top left corner
+				.Move(0,40)
+				lnNewLeft = lnHorizOff
+				lnNewTop = lnVertOff + 40
+			ENDIF
+		ENDWITH
+	ENDIF
+ENDFOR

@@ -1,0 +1,137 @@
+******************************************************************************
+*! Impbol.PRG - Imprimir Boleto
+*!
+*! Copyright (c) 2007 Salisoft Ltda.
+*! Rua Odinir Polydoro, 175
+*! Cep: 81.935-317 Curitiba - Pr
+*!
+*! Autor: Edson Gonçalves de Aguiar
+*! Função: Imprimir boleto
+******************************************************************************
+
+Lparameters _NumeroBoleto As Integer
+Local _FontFace As String
+Local _FontSize As Integer
+Local _Eject As Boolean
+Local _ImpressoraBoleto As String
+Local i As Integer
+Local _Linha As Integer
+
+i = 0
+
+*! Verifica se a impressora é matricial e define a fonte correta para o tipo
+**************************************************************************
+If Alltrim(ReadWriteFileIni.ReadFileIni(SYSTEM_PATH + 'Config.ini', 'Local Config', 'TipoImpressoraBoleto')) == '2' Then
+	_FontFace = 'Courier New'
+	_FontSize = 8
+Else
+	_FontFace = 'Draft 20cpi'
+	_FontSize = 10
+Endif
+_Eject = .F.
+**************************************************************************
+
+Set Console Off
+Set Device To Printer
+_ImpressoraBoleto = Alltrim(ReadWriteFileIni.ReadFileIni(SYSTEM_PATH + 'Config.ini', 'Local Config', 'ImpressoraBoleto'))
+
+If IsNull(_ImpressoraBoleto) Then
+	MessageBox('Não foi possível selecionar a impressora,' + Chr(13);
+		+ 'por favor verifique a impressora instalada' + Chr(13);
+		+ 'e a configuração local do sistema.', 16, 'Salisoft Sistemas!')
+	Return
+EndIf
+
+If _ImpressoraBoleto == '' Then
+	MessageBox('Não foi possível selecionar a impressora,' + Chr(13);
+		+ 'por favor verifique a impressora instalada' + Chr(13);
+		+ 'e a configuração local do sistema.', 16, 'Salisoft Sistemas!')
+	Return
+Endif
+
+Try
+	Set Printer To Name Alltrim((_ImpressoraBoleto))
+	Set Printer Font _FontFace, _FontSize
+
+	*! Seleciona os dados das tabelas de acordo com o número do boleto passado como parâmetro
+	**********************************************************************************************
+	Select boleto.Id, boleto.datavenc, boleto.dataemi, boleto.numdoc, boleto.nossonum,;
+		boleto.qtde, boleto.valor, boleto.vlrdoc, boleto.sacador, boleto.codbaixa,;
+		cliente.razao, cliente.cnpj, endereco.endereco, endereco.bairro,;
+		endereco.cep, endereco.cidade, endereco.estado;
+		From boleto;
+		Left Join cliente On boleto.idcliente = cliente.id;
+		Left Join endereco On boleto.idendereco = endereco.id;
+		Where boleto.id = _NumeroBoleto Into Cursor cBoletoImpbol
+	**********************************************************************************************
+
+	*! Inicia o processo de impressão
+	**********************************************************************************************
+	Printjob
+		*! Local de pagamento e vencimento
+		**********************************************************************************************
+		@ Cnf('Local de Pagamento', 2), Cnf('Local de Pagamento', 3) Say StartCgs.ReadGlobalConfig('LocalPagamentoBoleto') Font _FontFace, _FontSize
+		@ Cnf('Vencimento', 2), Cnf('Vencimento', 3) Say Alltrim(Dtoc(cBoletoImpbol.datavenc)) Font _FontFace, _FontSize
+
+		*! Cedente e código cedente
+		**********************************************************************************************
+		@ Cnf('Cedente', 2), Cnf('Cedente', 3) Say StartCgs.ReadGlobalConfig('CedenteBoleto') Font _FontFace, _FontSize
+		@ Cnf('Código Cedente', 2), Cnf('Código Cedente', 3) Say StartCgs.ReadGlobalConfig('CodigoCedenteBoleto') Font _FontFace, _FontSize
+
+		*! Data docto, Número docto, Espécie docto e Aceite
+		**********************************************************************************************
+		@ Cnf('Data do Documento', 2), Cnf('Data do Documento', 3) Say Alltrim(Dtoc(cBoletoImpbol.dataemi)) Font _FontFace, _FontSize
+		@ Cnf('Número do Documento', 2), Cnf('Número do Documento', 3) Say Alltrim(cBoletoImpbol.numdoc) Font _FontFace, _FontSize
+		@ Cnf('Espécie do Documento', 2), Cnf('Espécie do Documento', 3) Say StartCgs.ReadGlobalConfig('EspecieDocumentoBoleto') Font _FontFace, _FontSize
+		@ Cnf('Aceite', 2), Cnf('Aceite', 3) Say StartCgs.ReadGlobalConfig('AceiteBoleto') Font _FontFace, _FontSize
+
+		*! Espécie moeda, Quantidade, Valor e Valor do documento
+		**********************************************************************************************
+		@ Cnf('Espécie da Moeda', 2), Cnf('Espécie da Moeda', 3) Say StartCgs.ReadGlobalConfig('EspecieMoedaBoleto') Font _FontFace, _FontSize
+		@ Cnf('Quantidade', 2), Cnf('Quantidade', 3) Say Alltrim(Str(cBoletoImpbol.qtde, 10, 3)) Font _FontFace, _FontSize
+		@ Cnf('Valor', 2), Cnf('Valor', 3) Say Alltrim(Str(cBoletoImpbol.valor, 10, 2)) Font _FontFace, _FontSize
+		@ Cnf('Valor do Documento', 2), Cnf('Valor do Documento', 3) Say Alltrim(Str(cBoletoImpbol.vlrdoc, 10, 2)) Font _FontFace, _FontSize
+
+		*! Instruções
+		**********************************************************************************************
+		If Memlines(StartCgs.ReadGlobalConfig('InstrucoesBoleto')) # 0 Then
+			For i = 1 To Memlines(StartCgs.ReadGlobalConfig('InstrucoesBoleto'))
+				@ Cnf('Instruções', 2) + (i - 1), Cnf('Instruções', 3) Say Alltrim(Mline(StartCgs.ReadGlobalConfig('InstrucoesBoleto'), i)) Font _FontFace, _FontSize
+			EndFor
+		EndIf 
+
+		*! Sacado e Cnpj
+		**********************************************************************************************
+		@ Cnf('Sacado', 2), Cnf('Sacado', 3) Say Alltrim(cBoletoImpbol.razao) Font _FontFace, _FontSize
+		@ Cnf('Cnpj', 2), Cnf('Cnpj', 3) Say Alltrim(cBoletoImpbol.cnpj) Font _FontFace, _FontSize
+
+		*! Endereço e Bairro
+		**********************************************************************************************
+		@ Cnf('Endereço', 2), Cnf('Endereço', 3) Say Alltrim(cBoletoImpbol.endereco) Font _FontFace, _FontSize
+		@ Cnf('Endereço', 2), Cnf('Endereço', 3) + 60 Say Alltrim(cBoletoImpbol.bairro) Font _FontFace, _FontSize
+
+		*! Cep, Cidade e Estado
+		**********************************************************************************************
+		@ Cnf('Endereço', 2) + 1, Cnf('Endereço', 3) Say Alltrim(cBoletoImpbol.cep) Font _FontFace, _FontSize
+		@ Cnf('Endereço', 2) + 1, Cnf('Endereço', 3) + 12 Say Alltrim(cBoletoImpbol.cidade) Font _FontFace, _FontSize
+		@ Cnf('Endereço', 2) + 1, Cnf('Endereço', 3) + 52 Say Alltrim(cBoletoImpbol.estado) Font _FontFace, _FontSize
+
+		*! Sacador e Código de baixa
+		**********************************************************************************************
+		@ Cnf('Sacador', 2), Cnf('Sacador', 3) Say Alltrim(cBoletoImpbol.sacador) Font _FontFace, _FontSize
+		@ Cnf('Código de Baixa', 2), Cnf('Código de Baixa', 3) Say Alltrim(cBoletoImpbol.codbaixa) Font _FontFace, _FontSize
+
+		*! Finaliza o processo de impressão caso não haja mais produtos a serem impressos
+		**********************************************************************************************
+	Endprintjob
+	Set Device To Screen
+	Set Console On
+	Set Printer To Default
+	Update boleto Set impresso = .T. Where id = _NumeroBoleto
+Catch To oErr
+	Do TrataErro With oErr, 'Impbol.PRG'
+Endtry
+
+Function Cnf(_Descricao As String, _Retorno As Integer)
+	Return UtilEF.Confbol(_Descricao, _Retorno)
+EndFunc

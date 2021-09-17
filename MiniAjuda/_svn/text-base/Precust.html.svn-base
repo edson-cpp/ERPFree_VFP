@@ -1,0 +1,234 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Precust_arquivos/filelist.xml">
+<title>Procedimentos básicos</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:305932531;
+	mso-list-template-ids:1107174514;}
+@list l0:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:938025650;
+	mso-list-template-ids:40171268;}
+@list l2
+	{mso-list-id:1227107495;
+	mso-list-template-ids:-1178331262;}
+@list l2:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:1238975900;
+	mso-list-template-ids:1185959270;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Procedimentos básicos.</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>Botões:</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Atualização
+de preços de custo<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Atualizar – Aplica o percentual de desconto sobre
+     o custo bruto e grava as informações nos registros.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Fechar – Fecha a tela de atualização<i>.</i></span></li>
+</ol>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>Funções:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'><span
+style='mso-spacerun:yes'>      </span>Filtro<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt;
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>    </span>Filtra os
+produtos de acordo com seus respectivos grupos, subgrupos, fabricantes e/ou
+fornecedores.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span style='font-size:11.0pt'>Manter
+preço de venda<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt;
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>    </span>Marque
+esta caixa para manter o preço de venda e atualizar os percentuais de lucro líquido
+e bruto, por padrão o preço é atualizado de acordo com o percentual de lucro.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Nos campos <i style='mso-bidi-font-style:normal'>Grupo,
+     Sub-Grupo, Fornecedor e Fabricante</i> pressione <i>F5</i> ou <i>Clique
+     Duplo</i> para localizar por descrição.</span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Os botões tem atalhos para <span class=GramE>agilizar</span>
+     os procedimentos. Ex. Botão <u>F</u>echar, o F de Fechar é sublinhado,
+     isso indica que esta tecla combinada com a tecla de <span class=SpellE><i>Alt</i></span>
+     aciona este botão, isto funciona para todos os botões. Pressionar <span
+     class=SpellE>Alt</span>+F simultaneamente é o mesmo que clicar no botão
+     Fechar.</span></li>
+</ol>
+
+</div>
+
+</body>
+
+</html>

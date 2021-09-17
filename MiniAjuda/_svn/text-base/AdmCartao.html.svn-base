@@ -1,0 +1,94 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Procedimentos básicos</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Procedimentos básicos.</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>Botões:</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>      Cadastro de
+Administradoras de Cartão de Crédito</span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Novo/Salvar – Cria um novo
+     cadastro. / Grava as informações do registro.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Alterar/Cancelar – Habilita
+     os campos para alterações no registro selecionado. / Cancela o cadastro
+     corrente.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Localizar – Localiza a
+     partir da lista de registros.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Excluir – Exclui o registro
+     selecionado.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Primeiro( |&lt; ) – Navega
+     para o primeiro registro.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Anterior( &lt; ) – Navega
+     para o registro anterior.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Próximo( &gt; ) – Navega
+     para o próximo registro.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Último( &gt;| ) – Navega
+     para o último registro.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Fechar – Fecha a tela de
+     cadastro<i>.</i></span></li>
+</ol>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>Funções:</span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal><span style='font-size:11.0pt'>No campo código do grupo
+     pressione <i>F5</i> ou <i>Clique Duplo</i> no mouse para localizar por
+     descrição.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Ctrl + Home – Navega para o
+     primeiro registro.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Ctrl + Page Up – Navega
+     para o registro anterior.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Ctrl + Page Down – Navega
+     para o próximo registro.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Ctrl + End – Navega para o
+     último registro.</span></li>
+ <li class=MsoNormal><span style='font-size:11.0pt'>Os botões tem atalhos para
+     agilizar os procedimentos. Ex. Botão <u>F</u>echar, o F de Fechar é
+     sublinhado, isso indica que esta tecla combinada com a tecla de <i>Alt</i>
+     aciona este botão, isto funciona para todos os botões. Pressionar Alt+F
+     simultaneamente é o mesmo que clicar no botão Fechar.</span></li>
+</ol>
+
+</div>
+
+</body>
+
+</html>

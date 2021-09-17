@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Zip2SecureExe>
+    <PublisherName>Chilkat Software, Inc.</PublisherName>
+    <PublisherUrl>http://www.chilkatsoft.com/</PublisherUrl>
+    <ExeFile />
+    <ZipFile>C:\dados\Projetos\Cgs\branches\Cgs0.7\Update\Setup\CGS_0.7-UpdatePack.zip</ZipFile>
+    <Password />
+    <SfxConfig>
+        <AutoTemp>1</AutoTemp>
+        <DeleteAfterSetup>0</DeleteAfterSetup>
+        <ShowFin>0</ShowFin>
+        <ShowMain>0</ShowMain>
+        <ShowProgress>0</ShowProgress>
+        <WaitForSetup>1</WaitForSetup>
+        <Encryption>0</Encryption>
+        <KeyLength>128</KeyLength>
+        <MainTitle>Programa de extração dos arquivos de instalação.</MainTitle>
+        <MainCaption />
+        <FinTitle />
+        <FinCaption />
+        <ProgressTitle />
+        <ProgressCaption />
+        <PwTitle />
+        <PwCaption />
+        <SetupExe>CGS_0.7-UpdatePack.exe</SetupExe>
+        <UnzipDir />
+        <DefaultDir />
+        <IconFile>C:\dados\Projetos\Cgs\Trunk\Imagens\ico\cgs.ico</IconFile>
+        <Url />
+    </SfxConfig>
+</Zip2SecureExe>

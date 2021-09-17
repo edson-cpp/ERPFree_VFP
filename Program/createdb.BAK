@@ -1,0 +1,2183 @@
+Lparameters _InsData As String
+Chdir &SYSTEM_PATH.
+If !Directory('dados') Then
+	Mkdir dados
+Endif
+Chdir dados
+
+Close Databases All
+Close Tables All
+Create Database cgs
+Open Database cgs
+If _InsData != 'Backup' Then
+	Wait Window "Criando banco de dados e tabelas, aguarde..." Nowait
+Endif
+
+*! Criando as tabelas
+******************************************************************************
+*!-------------------------------- Usuários --------------------------------!*
+*! @field id = Identificação do registro
+*! @field login
+*! @field senha
+*! @field unome = Nome do Usuário
+*! @field CPF
+*! @field idusugru = Identificação do registro do grupo de usuários
+Create Table 'Usuários' Name 'usuario'(;
+	id			Integer Autoinc,;
+	login		Character(40),;
+	senha		Character(32),;
+	unome		Character(50),;
+	cpf			Character(14),;
+	idusugru	Integer;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------------- Clientes --------------------------------!*
+*! @field id = Identificação do registro
+*! @field razao = Nome ou Razão Social
+*! @field fantasia = Nome Fantazia
+*! @field nabrev = Nome Abreviado
+*! @field tipo = Determina o tipo de cliente (Jurídica, Física)
+*! @field cnpj = Cnpj ou Cpf
+*! @field inscest = Incricao Estadual ou Rg
+*! @field datacad = Data de Cadastro do Cliente
+*! @field natural = Naturalidade
+*! @field estciv = Estado civil (Solteiro, Casado, Desquitado, Viúvo
+*! @field datanas = Data de Nascimento
+*! @field nacional = Nacionalidade
+*! @field sexo = Sexo ( Masculino, Feminino )
+*! @field nomepai
+*! @field nomemae
+*! @field endereco
+*! @field numero
+*! @field cep
+*! @field complemento
+*! @field pontoref = Ponto de Referência
+*! @field cidade
+*! @field bairro
+*! @field estado
+*! @field fone
+*! @field fax = Faxímile
+*! @field ramal
+*! @field shat = Tipo de bate papo
+*! @field idshat = id/Email do bate papo
+*! @field email
+*! @field site
+*! @field contato
+*! @field rsdesde = Reside desde
+*! @field cargo
+*! @field celular
+*! @field dtadmi = Data de Admição
+*! @field situ = Situação do cliente ( Ativo, Inativo )
+*! @field nomeconj = Nome do Cônjuge
+*! @field profconj = Profissão do Cônjuge
+*! @field nasconj = Data de Nascimento do Cônjuge
+*! @field rendaconj = Renda do Cônjuge
+*! @field celconj = Celular do Cônjuge
+*! @field obsconj = Observação
+*! @field idbanco = Código do Banco
+*! @field numconta = Número da conta bancária
+*! @field respcom = Responsável Comercial
+*! @field fonecom = Fone Comercial
+*! @field respfin = Responsável Financeiro
+*! @field fonefin = Fone Financeiro
+*! @field ultcomp = Última Compra
+*! @field recbru = Receita bruta
+*! @field vidcheq = Incluso no vídeo cheque
+*! @field spc = Incluso no Spc
+*! @field serasa = Incluso no Serasa
+*! @field debatraso = Débitos em atraso
+*! @field nomeref1 = Nome da 1º referência
+*! @field foneref1 = Fone da 1º referência
+*! @field nomeref2 = Nome da 2º referência
+*! @field foneref2 = Fone da 2º referência
+*! @field nomeref3 = Nome da 3º referência
+*! @field foneref3 = Fone da 3º referência
+*! @field tipo1 = Tipo Comercial/Pessoal
+*! @field tipo2 = Tipo Comercial/Pessoal
+*! @field tipo3 = Tipo Comercial/Pessoal
+*! @field ultatu = Última altualização
+*! @field limcheq = Limite de Cheque
+*! @field limcart = Limite de Cartão
+*! @field limbole = Limite de Boleto
+*! @field limconv = Limite de Convênio
+*! @field pescomp1 = Pessoa Autorizada p/ compra1
+*! @field pescomp2 = Pessoa Autorizada p/ compra2
+*! @field pescomp3 = Pessoa Autorizada p/ compra3
+*! @field fonepc1 = Fone Pessoa Autorizada p/ compra1
+*! @field fonepc2 = Fone Pessoa Autorizada p/ compra2
+*! @field fonepc3 = Fone Pessoa Autorizada p/ compra3
+*! @field cpfpc1 = Cpf Pessoa Autorizada p/ compra1
+*! @field cpfpc2 = Cpf Pessoa Autorizada p/ compra2
+*! @field cpfpc3 = Cpf Pessoa Autorizada p/ compra3
+*! @field idtransp = Código do Transportador
+*! @field idvendedor = Código do vendedor
+Create Table 'Clientes' Name 'cliente'(;
+	id			Integer Autoinc,;
+	razao		Character(50),;
+	fantasia	Character(50),;
+	nabrev		Character(15),;
+	tipo		Character(10),;
+	cnpj		Character(18),;
+	inscest		Character(18),;
+	datacad		Date,;
+	natural		Character(50),;
+	estciv		Character(20),;
+	datanas		Date,;
+	nacional	Character(50),;
+	sexo		Character(10),;
+	nomepai		Character(50),;
+	nomemae		Character(50),;
+	endereco	Character(50),;
+	numero		Character(10),;
+	cep			Character(10),;
+	complemento	Character(50),;
+	pontoref	Character(50),;
+	cidade		Character(30),;
+	bairro		Character(30),;
+	estado		Character(2),;
+	fone		Character(14),;
+	fax			Character(14),;
+	ramal		Character(5),;
+	shat		Character(20),;
+	idshat		Character(50),;
+	email		Character(50),;
+	site		Character(50),;
+	contato		Character(30),;
+	rsdesde		Date,;
+	cargo		Character(50),;
+	celular		Character(14),;
+	dtadmi		Date,;
+	situ		Character(10),;
+	nomeconj	Character(50),;
+	profconj	Character(40),;
+	nasconj		Date,;
+	rendaconj	Float(10,2),;
+	celconj		Character(14),;
+	obsconj		Memo,;
+	idbanco		Integer,;
+	numconta	Character(10),;
+	respcom		Character(40),;
+	fonecom		Character(14),;
+	respfin		Character(40),;
+	fonefin		Character(14),;
+	ultcomp		Date,;
+	recbru		Float(10,2),;
+	vidcheq		Logical,;
+	spc			Logical,;
+	serasa		Logical,;
+	debatraso	Logical,;
+	nomeref1	Character(50),;
+	foneref1	Character(14),;
+	nomeref2	Character(50),;
+	foneref2	Character(14),;
+	nomeref3	Character(50),;
+	foneref3	Character(14),;
+	tipo1		Character(10),;
+	tipo2		Character(10),;
+	tipo3		Character(10),;
+	ultatu		Date,;
+	limcheq		Float(10,2),;
+	limcart		Float(10,2),;
+	limbole		Float(10,2),;
+	limconv		Float(10,2),;
+	pescomp1	Character(50),;
+	pescomp2	Character(50),;
+	pescomp3	Character(50),;
+	fonepc1		Character(14),;
+	fonepc2		Character(14),;
+	fonepc3		Character(14),;
+	cpfpc1		Character(14),;
+	cpfpc2		Character(14),;
+	cpfpc3		Character(14),;
+	idtransp	Integer,;
+	idvendedor	Integer;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------------ Fornecedores ------------------------------!*
+*! @field id = Identificação do registro
+*! @field razao = Nome ou Razão Social
+*! @field nabrev = Nome Abreviado
+*! @field endereco
+*! @field bairro
+*! @field cidade
+*! @field estado
+*! @field cep
+*! @field fone1
+*! @field ramal
+*! @field fone2
+*! @field contato
+*! @field fax
+*! @field email
+*! @field site
+*! @field cnpj = Cnpj ou Cpf
+*! @field inscest = Incricao Estadual ou Rg
+*! @field inscmun = Incricao Municipal
+*! @field datacad = Data de Cadastro
+*! @field tipo = Determina o tipo de cliente (Jurídica/Física)
+*! @field ativo = Sim ou Não
+*! @field obs = Observações
+Create Table 'Fornecedores' Name 'fornec'(;
+	id			Integer Autoinc,;
+	razao		Character(50),;
+	nabrev		Character(20),;
+	endereco	Character(50),;
+	bairro		Character(30),;
+	cidade		Character(30),;
+	estado		Character(2),;
+	cep			Character(10),;
+	fone1		Character(14),;
+	ramal		Character(5),;
+	fone2		Character(14),;
+	contato		Character(30),;
+	fax			Character(14),;
+	email		Character(50),;
+	site		Character(50),;
+	cnpj		Character(18),;
+	inscest		Character(18),;
+	inscmun		Character(18),;
+	datacad		Date,;
+	tipo		Character(10),;
+	situ		Character(10),;
+	obs			Memo;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------------- Vendedores -------------------------------!*
+*! @field id = Identificação do registro
+*! @field Nome
+*! @field endereco
+*! @field bairro
+*! @field cidade
+*! @field estado
+*! @field cep
+*! @field fone1
+*! @field fone2
+*! @field ramal
+*! @field fax
+*! @field contato
+*! @field datacad = Data de cadastro
+*! @field email
+*! @field site
+*! @field datanas = Data de nascimento
+*! @field rg
+*! @field cpf
+*! @field limcre = Limite de crédito
+*! @field limusado = Limite usado
+*! @field ativo
+*! @field obs = Observações
+*! @field comissao
+Create Table 'Vendedores' Name 'vendedor'(;
+	id			Integer Autoinc,;
+	Nome		Character(50),;
+	endereco	Character(50),;
+	bairro		Character(30),;
+	cidade		Character(30),;
+	estado		Character(2),;
+	cep			Character(10),;
+	fone1		Character(14),;
+	fone2		Character(14),;
+	ramal		Character(5),;
+	fax			Character(14),;
+	contato		Character(30),;
+	datacad		Date,;
+	email		Character(50),;
+	site		Character(50),;
+	datanas		Date,;
+	rg			Character(14),;
+	cpf			Character(14),;
+	limcre		Float(10,2),;
+	limusado	Float(10,2),;
+	situ		Character(10),;
+	obs			Memo,;
+	comissao	Float(5,2);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------------- Bancos ---------------------------------!*
+*! @field id = Identificação do registro
+*! @field Nome
+*! @field numero
+*! @field agencia
+*! @field datacad = Data de cadastro
+*! @field endereco
+*! @field bairro
+*! @field cidade
+*! @field estado
+*! @field cep
+*! @field fone1
+*! @field fone2
+*! @field fax
+*! @field ramal
+*! @field vlrtarifa = Valor da tarifa
+*! @field contato
+*! @field email
+*! @field site
+*! @field obs = Observações
+Create Table 'Bancos' Name 'banco'(;
+	id			Integer Autoinc,;
+	Nome		Character(20),;
+	numero		Character(10),;
+	agencia		Character(10),;
+	datacad		Date,;
+	endereco	Character(50),;
+	bairro		Character(30),;
+	cidade		Character(30),;
+	estado		Character(2),;
+	cep			Character(10),;
+	fone1		Character(14),;
+	fone2		Character(14),;
+	fax			Character(14),;
+	ramal		Character(14),;
+	vlrtarifa	Float(10,2),;
+	contato		Character(30),;
+	email		Character(50),;
+	site		Character(50),;
+	obs			Memo;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!----------------------------- Transportadores ----------------------------!*
+*! @field id = Identificação do registro
+*! @field razao = Razão social do transportador
+*! @field nabrev = Nome abreviado
+*! @field endereco
+*! @field bairro
+*! @field cidade
+*! @field estado
+*! @field cep
+*! @field fone1
+*! @field ramal
+*! @field fone2
+*! @field fax
+*! @field contato
+*! @field datacad = Data de cadastro
+*! @field cnpj
+*! @field inscest = Inscrição estadual
+*! @field inscmun = Inscrição municipal
+*! @field email
+*! @field site
+*! @field ativo = Ativo - Sim, Inativo - Não
+*! @field obs = Observações
+Create Table 'Transportadores' Name 'transp'(;
+	id			Integer Autoinc,;
+	razao		Character(50),;
+	nabrev		Character(20),;
+	endereco	Character(50),;
+	bairro		Character(30),;
+	cidade		Character(30),;
+	estado		Character(2),;
+	cep			Character(14),;
+	fone1		Character(14),;
+	ramal		Character(5),;
+	fone2		Character(14),;
+	fax			Character(14),;
+	contato		Character(30),;
+	datacad		Date,;
+	cnpj		Character(18),;
+	inscest		Character(14),;
+	inscmun		Character(14),;
+	email		Character(50),;
+	site		Character(50),;
+	situ		Character(10),;
+	obs			Memo;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------- Lançamento de Créditos -------------------------!*
+*! @field id = Identificação do registro
+*! @field idcliente = Código do cliente
+*! @field datalan = Data de lançamento do crédito
+*! @field situ = Situação do crédito
+*! @field idcontorc = Código da conta orçamentária
+*! @field idcentcus = Código do centro de custo
+*! @field numdoc = Número do documento
+*! @field idtipdoc = Código do tipo de documento
+*! @field emissao = Data da emissão
+*! @field vencimento = Data do vencimento
+*! @field valor = Valor do documento
+*! @field vlrpago = Valor pago do crédito
+*! @field debito = Valor do débito
+*! @field historico
+*! @field comdesc = Com desconto
+*! @field commulta = Multa por atraso
+*! @field comjuros = Juros o dia sim/não
+*! @field datadesc = Desconto até a data?
+*! @field vlrdesc = Valor do desconto
+*! @field perdesc = Percentual de desconto
+*! @field vlratraso = Valor por atraso
+*! @field peratraso = Percentual por atraso
+*! @field vlrjuros = Valor do juros
+*! @field perjuros = Percentual do juros
+*! @field datapag = Data do pagamento
+*! @field idcheque = Identificação do cheque
+*! @field idvenda = Identificação da venda
+*! @field idcontas = Identificação da conta
+Create Table 'Lançamento de Créditos' Name 'credito'(;
+	id			Integer Autoinc,;
+	idcliente	Integer,;
+	datalan		Date,;
+	situ		Character(1),;
+	idcontorc	Integer,;
+	idcentcus	Integer,;
+	numdoc		Character(15),;
+	idtipdoc	Integer,;
+	emissao		Date,;
+	vencimento	Date,;
+	valor		Float(10,2),;
+	vlrpago		Float(10,2),;
+	historico	Memo,;
+	comdesc		Logical,;
+	commulta	Logical,;
+	comjuros	Logical,;
+	datadesc	Date,;
+	vlrdesc		Float(10,2),;
+	perdesc		Float(6,2),;
+	vlratraso	Float(10,2),;
+	peratraso	Float(6,2),;
+	vlrjuros	Float(10,2),;
+	perjuros	Float(6,2),;
+	datapag		Date,;
+	idvenda		Integer,;
+	idcontas	Integer;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------- Lançamento de Débitos -------------------------!*
+*! @field id = Identificação do registro
+*! @field idfornec = Código do fornecedor
+*! @field datalan = Data de lançamento
+*! @field situ = Situação
+*! @field idcontorc = Código da conta orçamentária
+*! @field idcentcus = Código do centro de custo
+*! @field numdoc = Número do documento
+*! @field idtipdoc = Código do tipo de documento
+*! @field emissao = Data da emissão
+*! @field vencimento = Data do vencimento
+*! @field valor = Valor do documento
+*! @field debito = Valor do débito
+*! @field vlrpago = Valor pago do crédito
+*! @field historico
+*! @field idbanco = Código do banco
+*! @field emitente = Nome do emitente
+*! @field Conta = Número da conta do emitente
+*! @field cheque = Número do cheque
+*! @field cnpj = Cpnj ou Cpf
+*! @field comdesc = Com desconto
+*! @field commulta = Multa por atraso
+*! @field comjuros = Juros ao dia sim/não
+*! @field datadesc = Desconto até a data?
+*! @field vlrdesc = Valor do desconto
+*! @field perdesc = Percentual de desconto
+*! @field vlratraso = Valor por atraso
+*! @field peratraso = Percentual por atraso
+*! @field vlrjuros = Valor do juros
+*! @field perjuros = Percentual do juros
+*! @field datapag = Data do pagamento
+*! @field idcompra = Código da entrada de produtos
+Create Table 'Lançamento de Débitos' Name 'debito'(;
+	id			Integer Autoinc,;
+	idfornec	Integer,;
+	datalan		Date,;
+	situ		Character(1),;
+	idcontorc	Integer,;
+	idcentcus	Integer,;
+	numdoc		Character(15),;
+	idtipdoc	Integer,;
+	emissao		Date,;
+	vencimento	Date,;
+	valor		Float(10,2),;
+	vlrpago		Float(10,2),;
+	historico	Memo,;
+	idbanco		Integer,;
+	emitente	Character(40),;
+	Conta		Character(10),;
+	cheque		Character(10),;
+	cnpj		Character(18),;
+	comdesc		Logical,;
+	commulta	Logical,;
+	comjuros	Logical,;
+	datadesc	Date,;
+	vlrdesc		Float(10,2),;
+	perdesc		Float(6,2),;
+	vlratraso	Float(10,2),;
+	peratraso	Float(6,2),;
+	vlrjuros	Float(10,2),;
+	perjuros	Float(6,2),;
+	datapag		Date,;
+	idcompra	Integer;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!---------------------------- Tipo de Documento ---------------------------!*
+*! @field id = Identificação do registro
+*! @field Nome = Nome do tipo de documento
+Create Table 'Tipo de Documento' Name 'tipdoc'(;
+	id			Integer Autoinc,;
+	Nome		Character(40);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!----------------------------- Centro de Custo ----------------------------!*
+*! @field id = Identificação do registro
+*! @field descricao = Descrição do centro de custo
+Create Table 'Centro de Custo' Name 'centcus'(;
+	id			Integer Autoinc,;
+	descricao	Character(50);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------- Conta Orcamentária ---------------------------!*
+*! @field id = Identificação do registro
+*! @field Nome = Descrição da conta orçamentária
+Create Table 'Conta Orcamentária' Name 'contorc'(;
+	id			Integer Autoinc,;
+	Nome		Character(50);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------------ Departamento ------------------------------!*
+*! @field id = Identificação do registro
+*! @field Nome = Descrição do departamento
+Create Table 'Departamento' Name 'depto'(;
+	id			Integer Autoinc,;
+	Nome		Character(45);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------- Grupos de Produtos ---------------------------!*
+*! @field id = Identificação do registro
+*! @field Nome = Descrição do grupo
+Create Table 'Grupos de Produtos' Name 'grupo'(;
+	id			Integer Autoinc,;
+	Nome		Character(40);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------------- Vendas ---------------------------------!*
+*! @field id = Identificação do registro
+*! @field idcliente = Código do cliente
+*! @field idvendedor = Código do vendedor
+*! @field idendereco = Código do endereco
+*! @field idveiculo = Código do veículo
+*! @field dataven = Data e hora da venda
+*! @field vlrven = Valor total da venda
+*! @field dinheiro = Valor pago em dinheiro
+*! @field ticket = Valor pago em tickets
+*! @field cheque = Valor pago em cheque
+*! @field cartao = Valor pago em cartao
+*! @field boleto = Valor pago em boleto
+*! @field crediario = Valor pago no crediário
+*! @field desconto
+*! @field _status = Status da venda: V = Válidas, C = Canceladas
+Create Table 'Vendas' Name 'venda'(;
+	id			Integer Autoinc,;
+	idcliente	Integer,;
+	idvendedor	Integer,;
+	idendereco	Integer,;
+	idveiculo	Integer,;
+	dataven		Datetime,;
+	vlrven		Float(10,2),;
+	dinheiro	Float(10,2),;
+	ticket		Float(10,2),;
+	cheque		Float(10,2),;
+	cartao		Float(10,2),;
+	boleto		Float(10,2),;
+	crediario	Float(10,2),;
+	desconto	Float(10,2),;
+	_status		Character(1);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------------- Produtos --------------------------------!*
+*! @field id = Identificação do registro
+*! @field descricao = Descrição do produto
+*! @field interno = Código interno
+*! @field barras = Código de barras
+*! @field idgrupo = Identificação do grupo
+*! @field idsubgrupo = Identificação do subgrupo
+*! @field idfab = Identificação do fabricante
+*! @field idfornec = Identificação do fornecedor
+*! @field unidade = Unidade de medida
+*! @field datacad = Data de cadastro
+*! @field estoque
+*! @field estmin = Quantidade mínima em estoque
+*! @field precust = Preço de custo
+*! @field custobru = Custo bruto (campo exclusivo para auto peças)
+*! @field percdesc = Percentual de desconto sobre custo bruto (campo exclusivo para auto peças)
+*! @field prevend = Preço de venda
+*! @field preprom = Preço promocional
+*! @field locali = Localização
+*! @field percbrut = Percentual bruto
+*! @field icms
+*! @field despfix = Despesas fixas
+*! @field percliq = Percentual líquido
+*! @field ultcomp = Data da última compra
+*! @field obs = Observações
+*! @field comissao = Percentual de comissão paga ao vendedor na venda.
+*! @field valipromo = Data de validade da promoção
+*! @field ipi = Percentual de IPI
+*! @field basecalc = Percentual de Base de calculo de substituição tributária
+*! @field clafis = Classificação Fiscal
+*! @field situtrib = Situação Tributária
+Create Table 'Produtos' Name 'produto'(;
+	id			Integer Autoinc,;
+	descricao	Character(45),;
+	interno		Character(15),;
+	barras		Numeric(13),;
+	idgrupo		Integer,;
+	idsubgrupo	Integer,;
+	idfab		Integer,;
+	idfornec	Integer,;
+	unidade		Character(10),;
+	datacad		Date,;
+	estoque		Float(10,3),;
+	estmin		Float(10,3),;
+	precust		Float(10,2),;
+	custobru	Float(10,2),;
+	percdesc	Float(6,2),;
+	prevend		Float(10,2),;
+	preprom		Float(10,2),;
+	locali		Character(40),;
+	percbrut	Float(5,2),;
+	icms		Float(6,2),;
+	despfix		Float(6,2),;
+	percliq		Float(5,2),;
+	ultcomp		Date,;
+	obs			Memo,;
+	comissao	Float(5,2),;
+	valipromo	Date,;
+	ipi			Float(6,2),;
+	basecalc	Float(6,2),;
+	clafis		Character(8),;
+	situtrib	Character(3);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------- Subgrupos de Produtos -------------------------!*
+*! @field id = Identificação do registro
+*! @field Nome = Descrição do subgrupo
+*! @field idgrupo = Identificação do grupo
+Create Table 'Subgrupos de Produtos' Name 'subgrupo'(;
+	id			Integer Autoinc,;
+	Nome		Character(50),;
+	idgrupo		Integer,;
+	datacad		Date;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!---------------------------- Produtos Vendidos ---------------------------!*
+*! @field id = Identificação do registro
+*! @field idvenda = Identificação da venda
+*! @field idproduto = Identificação do produto
+*! @field preco = Preço de venda
+*! @field qtde = Quantidade vendida
+*! @field idproncad = Identificação do produto não cadastrado
+*! @field qtdedev = Quantidade devolvida
+Create Table 'Produtos Vendidos' Name 'proven'(;
+	id			Integer Autoinc,;
+	idvenda		Integer,;
+	idproduto	Integer,;
+	preco       Float(10,2),;
+	qtde		Float(8,3),;
+	idproncad	Integer,;
+	qtdedev		Float(8,3);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------------- Fabricantes ------------------------------!*
+*! @field id = Identificação do registro
+*! @field Nome = Descrição
+Create Table 'Fabricantes' Name 'fab'(;
+	id			Integer Autoinc,;
+	Nome		Character(45);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------- Dados da Empresa Usuária do Sistema ------------------!*
+*! @field id = Identificação do registro
+*! @field razao = Razão Social
+*! @field endereco
+*! @field cidade
+*! @field bairro
+*! @field estado
+*! @field cep
+*! @field fone
+*! @field email
+*! @field inscest = Inscrição estadual
+*! @field cnpj
+*! @field resp = Responsável
+*! @field website
+Create Table 'Dados da Empresa Usuária do Sistema' Name 'cademp'(;
+	id			Integer Autoinc,;
+	razao		Character(50),;
+	endereco	Character(50),;
+	cidade		Character(30),;
+	bairro		Character(30),;
+	estado		Character(2),;
+	cep			Character(10),;
+	fone		Character(14),;
+	email		Character(50),;
+	inscest		Character(14),;
+	cnpj		Character(18),;
+	resp		Character(30),;
+	website		Character(50);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------------- Endereços -------------------------------!*
+*! @field id = Identificação do registro
+*! @field endereco
+*! @field numero
+*! @field cidade
+*! @field bairro
+*! @field cep
+*! @field contato
+*! @field fone
+*! @field estado
+*! @field complemento
+*! @field pontoref = Ponto de referência
+*! @field tipo = Pode ser: 1 - Comercial, 2 - Residencial, 3 - Cobrança, 4 - Entrega
+*! @field idcliente = Identificação do cliente
+*! @field principal
+Create Table 'Endereços' Name 'endereco'(;
+	id			Integer Autoinc,;
+	endereco	Character(50),;
+	numero		Character(10),;
+	cidade		Character(40),;
+	bairro		Character(50),;
+	cep			Character(10),;
+	contato		Character(40),;
+	fone		Character(14),;
+	estado		Character(2),;
+	complemento	Character(50),;
+	pontoref	Character(50),;
+	tipo		Numeric(1),;
+	idcliente	Integer,;
+	principal	Logical;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------------ Configurações -----------------------------!*
+*! @field id = Identificação do registro
+*! @field tadate = Data atual para controle de validade da versão trial; Criptografado
+*! @field qtmeio = Quantidade de banners que serão exibidos no meio do anúncio
+*! @field qtroda = Quantidade de banners que serão exibidos no rodapé do anúncio
+*! @field dtatubn = Data de atualização dos banners
+*! @field linkac = Link para arquivo ini de atualização da Cybersis
+*! @field linkaa = Link para arquivo ini de atualização do Afiliado
+Create Table 'Configurações' Name 'config' (;
+	id		Integer Autoinc,;
+	tadate	Date,;
+	qtmeio	Numeric(2),;
+	qtroda	Numeric(2),;
+	dtatubn	Date,;
+	linkac	Varchar(150),;
+	linkaa	Varchar(150);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------------- Parâmetros -------------------------------!*
+*! @field id = Identificação do registro
+*! @field campo = Nome do campo de configuração
+*! @field valor = Valor do campo de configuração
+Create Table 'Parâmetros' Name 'tparam' (;
+	id			Integer Autoinc,;
+	campo		Character(40),;
+	valor		Character(80);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------- Entrada de Produtos --------------------------!*
+*! @field id = Identificação do registro
+*! @field idfornec = Identificação do fornecedor
+*! @field numdoc = Número do documento
+*! @field _status = Status da compra: V = Válidas, C = Canceladas
+*! @field datacomp = Data da compra
+*! @field valor = Valor da compra
+Create Table 'Compras' Name 'compra' (;
+	id			Integer Autoinc,;
+	idfornec	Integer,;
+	numdoc		Character(15),;
+	_status		Character(1),;
+	datacomp	Date,;
+	valor		Float(10,2);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------- Produtos Comprados ---------------------------!*
+*! @field id = Identificação do registro
+*! @field idproduto = Identificação do produto
+*! @field idcompra = Identificação da entrada de produtos
+*! @field valor = Preço de custo
+*! @field qtde = Quantidade
+Create Table 'Produtos Comprados' Name 'procomp' (;
+	id			Integer Autoinc,;
+	idproduto	Integer,;
+	idcompra	Integer,;
+	valor		Float(10,2),;
+	qtde		Float(8,3);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------------- Cheques --------------------------------!*
+*! @field id = Identificação do registro
+*! @field idvenda = Identificação da venda
+*! @field idcliente = Identificação do cliente
+*! @field idbanco = Identificação do banco
+*! @field nconta = Número da conta
+*! @field numero = Número do cheque
+*! @field valor
+*! @field datalan = Data de lançamento ou emissão
+*! @field situ = Situação aqui pode ser: Compensado(C), Repassado(R), Devolvido(D), Aberto(A)
+*! @field dataven = Data de vencimento
+*! @field emitente = Nome do emitente do cheque caso não seja do cliente.
+*! @field datarep = Data de repasse
+*! @field reppara = Nome da pessoa ou empresa para quem foi repassado o cheque
+*! @field datacomp = Data de compensação
+*! @field cnpj = CNPJ do emitente caso não seja do cliente.
+Create Table 'Cheques' Name 'cheque' (;
+	id			Integer Autoinc,;
+	idvenda		Integer,;
+	idcliente	Integer,;
+	idbanco		Integer,;
+	nconta		Character(12),;
+	numero		Character(12),;
+	valor		Float(10,2),;
+	datalan		Date,;
+	situ		Character(1),;
+	dataven		Date,;
+	emitente	Character(50),;
+	datarep		Date,;
+	reppara		Character(50),;
+	datacomp	Date,;
+	cnpj		Character(18),;
+	idcredito	Integer;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!---------------------------- Contas Bancárias ----------------------------!*
+*! @field id = Identificação do registro
+*! @field descricao = Descrição da conta
+*! @field idbanco = Identificação do banco
+*! @field nconta = Número da conta
+Create Table 'Contas Bancárias' Name 'contas' (;
+	id			Integer Autoinc,;
+	descricao	Character(50),;
+	idbanco		Integer,;
+	nconta		Character(12);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------------- Pré-Venda -------------------------------!*
+*! @field id = Identificação do registro
+*! @field idcliente = Código do cliente
+*! @field idendereco = Código do endereco
+*! @field idveiculo = Código do veículo
+*! @field idvendedor = Código do vendedor
+*! @field datapre = Data e hora da pré-venda
+*! @field vlrpre = Valor total da pré-venda
+*! @field desconto
+Create Table 'Pré-Venda' Name 'prevenda'(;
+	id			Integer Autoinc,;
+	idcliente	Integer,;
+	idendereco	Integer,;
+	idveiculo	Integer,;
+	idvendedor	Integer,;
+	datapre		Datetime,;
+	vlrpre		Float(10,2),;
+	desconto	Float(10,2);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------- Produtos da Pré-Venda -------------------------!*
+*! @field id = Identificação do registro
+*! @field idprevenda = Identificação da pré-venda
+*! @field idproduto = Identificação do produto
+*! @field preco = Preço de venda
+*! @field qtde = Quantidade
+*! @field idproncad = Identificação do produto não cadastrado
+Create Table 'Produtos da Pré-Venda' Name 'propre'(;
+	id			Integer Autoinc,;
+	idprevenda	Integer,;
+	idproduto	Integer,;
+	preco       Float(10,2),;
+	qtde		Float(8,3),;
+	idproncad	Integer;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------------- Orçamento -------------------------------!*
+*! @field id = Identificação do registro
+*! @field idcliente = Código do cliente
+*! @field idendereco = Código do endereco
+*! @field idveiculo = Código do veículo
+*! @field idvendedor = Código do vendedor
+*! @field dataorc = Data e hora do orçamento
+*! @field vlrorc = Valor total do orçamento
+Create Table 'Orçamento' Name 'orcame'(;
+	id			Integer Autoinc,;
+	idcliente	Integer,;
+	idendereco	Integer,;
+	idveiculo	Integer,;
+	idvendedor	Integer,;
+	dataorc		Datetime,;
+	vlrorc		Float(10,2);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------- Produtos do Orçamento -------------------------!*
+*! @field id = Identificação do registro
+*! @field idorcame = Identificação do orçamento
+*! @field idproduto = Identificação do produto
+*! @field preco = Preço orçado
+*! @field qtde = Quantidade
+*! @field idproncad = Identificação do produto não cadastrado
+Create Table 'Produtos do Orçamento' Name 'proorc'(;
+	id			Integer Autoinc,;
+	idorcame	Integer,;
+	idproduto	Integer,;
+	preco       Float(10,2),;
+	qtde		Float(8,3),;
+	idproncad	Integer;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------- Grupos de Usuários ---------------------------!*
+*! @field id = Identificação do registro
+*! @field descricao = Descrição do Grupo
+Create Table 'Grupos de Usuários' Name 'usugru'(;
+	id			Integer Autoinc,;
+	descricao	Character(50);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------- Permissões para Grupos de Usuários --------------------!*
+*! @field id = Identificação do registro
+*! @field idgrupo = Identificação do Grupo
+*! @field recurso = Recurso(tela) a qual se dará ou não permissões
+*! @field permissao = Permissões em formato T ou F onde: TTTTFFFF
+*!														 ||||||||_ Reservado
+*!														 |||||||__ Reservado
+*!														 ||||||___ Reservado
+*!														 |||||____ Reservado
+*!														 ||||_____ Excluir(em caso de cadastro)
+*!														 |||______ Alterar(em caso de cadastro)
+*!														 ||_______ Incluir(em caso de cadastro)
+*!														 |________ Acesso ao recurso
+Create Table 'Permissões para Grupos de Usuários' Name 'pergru'(;
+	id			Integer Autoinc,;
+	idgrupo		Integer,;
+	recurso		Character(15),;
+	permissao	Character(8);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------ Permissões para Usuários ------------------------!*
+*! @field id = Identificação do registro
+*! @field idusuario = Identificação do Usuário
+*! @field recurso = Recurso(tela) a qual se dará ou não permissões
+*! @field permissao = Permissões em formato T ou F onde: TTTTFFFF
+*!														 ||||||||_ Reservado
+*!														 |||||||__ Reservado
+*!														 ||||||___ Reservado
+*!														 |||||____ Reservado
+*!														 ||||_____ Excluir(em caso de cadastro)
+*!														 |||______ Alterar(em caso de cadastro)
+*!														 ||_______ Incluir(em caso de cadastro)
+*!														 |________ Acesso ao recurso
+Create Table 'Permissões para Usuários' Name 'perusu'(;
+	id			Integer Autoinc,;
+	idusuario	Integer,;
+	recurso		Character(15),;
+	permissao	Character(8);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------- Produtos Vendidos não Cadastrados -------------------!*
+*! @field id = Identificação do registro
+*! @field descrição = Descrição do produto
+Create Table 'Produtos Vendidos não Cadastrados' Name 'proncad'(;
+	id			Integer Autoinc,;
+	descricao	Character(45);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------- Dados Alterados de Cliente na Hora da Venda --------------!*
+*! @field id = Identificação do registro
+*! @field idvenda = Identificação da venda
+*! @field razao = Nome ou razão social do cliente
+*! @field endereco
+*! @field bairro
+*! @field cidade
+*! @field estado
+*! @field pontoref = Ponto de referência
+Create Table 'Dados Alterados de Cliente na Hora da Venda' Name 'clivenda'(;
+	id			Integer Autoinc,;
+	idvenda		Integer,;
+	razao		Character(50),;
+	endereco	Character(50),;
+	bairro		Character(30),;
+	cidade		Character(30),;
+	estado		Character(2),;
+	pontoref	Character(50);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------- Administradoras de Cartão de Crédito -------------------!*
+*! @field id = Identificação do registro
+*! @field descrição = Descrição da administradora
+Create Table 'Administradoras de Cartão de Crédito' Name 'admcartao'(;
+	id			Integer Autoinc,;
+	descricao	Character(45);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------- Cartões de Crédito ---------------------------!*
+*! @field id = Identificação do registro
+*! @field descrição = Descrição da administradora
+*! @field percentual = Percentual de juros do cartão
+*! @field idadmcartao = Identificação da administradora do cartão
+Create Table 'Cartões de Crédito' Name 'cadcart'(;
+	id			Integer Autoinc,;
+	descricao	Character(45),;
+	percentual	Float(6,3),;
+	idadmcartao	Integer;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------- Fechar Venda no Cartão de Crédito --------------------!*
+*! @field id = Identificação do registro
+*! @field idvenda = Identificação da venda
+*! @field idcadcart = Identificação do cartão
+*! @field idcliente = Identificação do cliente
+*! @field dataemi = Data de emissão
+*! @field datavenc = Data de vencimento
+*! @field datapag = Data de pagamento
+*! @field valor = Valor da parcela
+*! @field numparc = Número da parcela
+*! @field totparc = Total de parcelas
+*! @field situ = Situação aqui pode ser: Aberto(A), Baixado(B)
+Create Table 'Fechar Venda no Cartão de Crédito' Name 'cartao'(;
+	id			Integer Autoinc,;
+	idvenda		Integer,;
+	idcadcart	Integer,;
+	idcliente	Integer,;
+	dataemi		Date,;
+	datavenc	Date,;
+	datapag		Date,;
+	valor		Float(10,2),;
+	numparc		Numeric(3),;
+	totparc		Numeric(3),;
+	situ		Character(1);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!----------------------- Fechar Venda no Crediário ------------------------!*
+*! @field id = Identificação do registro
+*! @field idvenda = Identificação da venda
+*! @field idcliente = Identificação do cliente
+*! @field dataemi = Data de emissão
+*! @field datavenc = Data de vencimento
+*! @field datapag = Data de pagamento
+*! @field valor = Valor da parcela
+*! @field numparc = Número da parcela
+*! @field totparc = Total de parcelas
+*! @field situ = Situação aqui pode ser: Aberto(A), Baixado(B)
+Create Table 'Fechar Venda no Crediário' Name 'crediario'(;
+	id			Integer Autoinc,;
+	idvenda		Integer,;
+	idcliente	Integer,;
+	dataemi		Date,;
+	datavenc	Date,;
+	datapag		Date,;
+	valor		Float(10,2),;
+	numparc		Numeric(3),;
+	totparc		Numeric(3),;
+	situ		Character(1);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!-------------------------------- Situtrib --------------------------------!*
+*! @field id = Identificação do registro
+*! @field codigo = Código de substituição tributária
+*! @field descricao = Descrição
+*! @field icmspad = ICMS Padrão
+Create Table 'Situação Tributária' Name 'situtrib'(;
+	id			Integer Autoinc,;
+	codigo		Character(3),;
+	descricao	Character(80),;
+	icmspad		Float(6,2);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------------- Tabela Icms ------------------------------!*
+*! @field id = Identificação do registro
+*! @field origem = Estado de Origem
+*! @field destino = Estado de Destino
+*! @field icms = Percentual Icms para o relacionamento entre os estados
+Create Table 'Tabela Icms' Name 'icms'(;
+	id			Integer Autoinc,;
+	origem		Character(2),;
+	destino		Character(2),;
+	icms		Float(5,2);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------- Fechar Venda no Boleto -------------------------!*
+*! @field id = Identificação do registro
+*! @field idvenda = Identificação da venda
+*! @field idcliente = Identificação do cliente
+*! @field idendereco = Identificação do endereço
+*! @field nossonum = Nosso número
+*! @field dataemi = Data de emissão
+*! @field datavenc = Data de vencimento
+*! @field datapag = Data de pagamento
+*! @field vlrpago = Valor pago
+*! @field vlrdoc = Valor total do documento
+*! @field numparc = Número de parcelas
+*! @field totparc = Total de parcelas
+*! @field numdoc = Número do documento
+*! @field qtde = Quantidade
+*! @field valor
+*! @field sacador = Sacador / Avalista
+*! @field codbaixa = Código de baixa
+*! @field impresso = Indica se o documento já foi impresso
+*! @field situ = Situação aqui pode ser: Aberto(A), Baixado(B)
+Create Table 'Fechar Venda no Boleto' Name 'boleto'(;
+	id			Integer Autoinc,;
+	idvenda		Integer,;
+	idcliente	Integer,;
+	idendereco	Integer,;
+	nossonum	Character(20),;
+	dataemi		Date,;
+	datavenc	Date,;
+	datapag		Date,;
+	vlrpago		Float(10,2),;
+	vlrdoc		Float(10,2),;
+	numparc		Numeric(3),;
+	totparc		Numeric(3),;
+	numdoc		Character(10),;
+	qtde		Float(10,3),;
+	valor		Float(10,2),;
+	sacador		Character(40),;
+	codbaixa	Character(10),;
+	impresso	Logical,;
+	situ		Character(1);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------------- Confbol --------------------------------!*
+*! @field id = Identificação do registro
+*! @field descricao = Descrição do campo no boleto
+*! @field linha = Medida em milímetros do topo da página até o campo
+*! @field coluna = Medida em milímetros da esquerda da página até o campo
+Create Table 'Configurações do boleto' Name 'confbol'(;
+	id			Integer Autoinc,;
+	descricao	Character(200),;
+	linha		Float(8,4),;
+	coluna		Float(8,4);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!--------------------------------- Veiculo --------------------------------!*
+*! @field id = Identificação do registro
+*! @field idcliente = Identificação do cliente
+*! @field modelo
+*! @field marca
+*! @field cor
+*! @field placa
+Create Table 'Veículos do cliente' Name 'veiculo'(;
+	id			Integer Autoinc,;
+	idcliente	Integer,;
+	modelo		Character(20),;
+	marca		Character(15),;
+	cor			Character(15),;
+	placa		Character(15);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------------ Colaboradores -----------------------------!*
+*! @field id = Identificação do registro
+*! @field cnome = Campo nome
+*! @field datacad = Data de cadastro
+*! @field endereco
+*! @field bairro
+*! @field cidade
+*! @field estado
+*! @field cep
+*! @field fone
+*! @field celular
+*! @field rg
+*! @field cpf
+*! @field datanas = Data de nascimento
+*! @field email
+*! @field cargo = Pode ser: 1 - Técnico, 2 - Atendente, 3 - Outro
+*! @field obs = Observações
+*! @field comissao = Comissão dos técnicos
+Create Table 'Colaboradores' Name 'colab'(;
+	id			Integer Autoinc,;
+	cnome		Character(20),;
+	datacad		Date,;
+	endereco	Character(50),;
+	bairro		Character(40),;
+	cidade		Character(40),;
+	estado		Character(2),;
+	cep			Character(10),;
+	fone		Character(14),;
+	celular		Character(14),;
+	rg			Character(10),;
+	cpf			Character(15),;
+	datanas		Date,;
+	email		Character(50),;
+	cargo		Numeric(1),;
+	obs			Memo,;
+	comissao	Float(5,2);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!---------------------------- Ordem de Serviço ----------------------------!*
+*! @field id = Identificação do registro
+*! @field idcliente = Identificação do cliente
+*! @field idendereco = Identificação do endereço
+*! @field idatend = Identificação do atendente
+*! @field idtec = Identificação do técnico
+*! @field dataent = Data de entrada do equipamento
+*! @field _status = Pode ser: 1 - Aberta, 2 - Pendente, 3 - Concluída
+*! @field modelo = Pode ser o modelo do veículo ou a descrição(nome) do equipamento
+*! @field marca = Pode ser a marca do veículo ou do equipamento
+*! @field cor = Pode ser a cor do veículo ou o modelo do equipamento
+*! @field placa = Pode ser a placa do veículo ou o número de série do equipamento
+*! @field defeito = Defeito reportado pelo cliente
+*! @field servicos = Descrição dos serviços executados
+*! @field totpro = Valor total dos produtos aplicados
+*! @field totserv = Valor dos serviços executados
+*! @field datasai = Data de saída
+*! @field relatorio = Relatório(laudo) técnico do serviço.
+*! @field historico = Histórico de execução do serviço
+*! @field condeq = Condições do equipamento: 1 - Ruim, 2 - Regular, 3 - Bom, 4 - Excelente
+*! @field tiposerv = Tipo de Serviço: 1 - Manutenção, 2 - Garantia de Fábrica, 3 - Garantia da Loja
+*! @field orcame = Status do Orçamento: 1 - Aguardando posicionamento, 2 - Aprovado, 3 - Recusado
+*! @field aprovpor = Pessoa que aprovou o orçamento
+Create Table 'Ordem de Serviço' Name 'ordserv'(;
+	id			Integer Autoinc,;
+	idcliente	Integer,;
+	idendereco	Integer,;
+	idatend		Integer,;
+	idtec		Integer,;
+	dataent		Date,;
+	_status		Numeric(1),;
+	modelo		Character(30),;
+	marca		Character(20),;
+	cor			Character(20),;
+	placa		Character(20),;
+	defeito		Memo,;
+	servicos	Memo,;
+	totpro		Float(10,2),;
+	totserv		Float(10,2),;
+	datasai		Date,;
+	relatorio	Memo,;
+	historico	Memo,;
+	condeq		Numeric(1),;
+	tiposerv	Numeric(1),;
+	orcame		Numeric(1),;
+	aprovpor	Character(30);
+	)
+*!--------------------------------------------------------------------------!*
+
+*!---------------------- Produtos da Ordem de Serviços ---------------------!*
+*! @field id = Identificação do registro
+*! @field idordserv = Identificação da venda
+*! @field idproduto = Identificação do produto
+*! @field preco = Preço de venda
+*! @field qtde = Quantidade vendida
+*! @field idproncad = Identificação do produto não cadastrado
+Create Table 'Produtos da Ordem de Serviços' Name 'proord'(;
+	id			Integer Autoinc,;
+	idordserv	Integer,;
+	idproduto	Integer,;
+	preco       Float(10,2),;
+	qtde		Float(8,3),;
+	idproncad	Integer;
+	)
+*!--------------------------------------------------------------------------!*
+
+*!------------------------- Devoluções de Clientes -------------------------!*
+*! @field id = Identificação do registro
+*! @field idvenda = Identificação da venda
+*! @field idproduto = Identificação do produto
+*! @field idcliente = Identificação do cliente
+*! @field motivo = Motivo da devolução pode ser: 1 - Simples Troca, 2 - Defeito
+*! @field financ = Financeiro pode ser: 1 - Gravar crédito p/ cliente, 2 - Reembolsar(será lançado no momento da gravação um débito no valor reembolsado)
+*! @field qtde = Quantidade devolvida
+*! @field credito = Valor do crédito gerado para o cliente(pode conter o valor de crédito ou de reembolso, dependendo da variável financ)
+*! @field saldo = Saldo que o cliente ainda tem disponível para usar nas suas compras
+*! @field datadev = Data da devolução
+Create Table 'Devoluções de Clientes' Name 'devcli'(;
+	id			Integer Autoinc,;
+	idvenda		Integer,;
+	idproduto	Integer,;
+	idcliente	Integer,;
+	motivo		Numeric(1),;
+	financ		Numeric(1),;
+	qtde		Float(9,3),;
+	credito		Float(10,2),;
+	saldo		Float(10,2),;
+	datadev		Date;
+	)
+*!--------------------------------------------------------------------------!*
+*! Fim da criação das tabelas
+******************************************************************************
+
+** Iniciando criação de Triggers para integridade referencial
+******************************************************************************
+Create Trigger On cliente For Delete As RefInt(Id, 'cliente', 'delete')
+Create Trigger On fornec For Delete As RefInt(Id, 'fornec', 'delete')
+Create Trigger On vendedor For Delete As RefInt(Id, 'vendedor', 'delete')
+Create Trigger On banco For Delete As RefInt(Id, 'banco', 'delete')
+Create Trigger On transp For Delete As RefInt(Id, 'transp', 'delete')
+Create Trigger On credito For Delete As RefInt(Id, 'credito', 'delete')
+Create Trigger On debito For Delete As RefInt(Id, 'debito', 'delete')
+Create Trigger On tipdoc For Delete As RefInt(Id, 'tipdoc', 'delete')
+Create Trigger On centcus For Delete As RefInt(Id, 'centcus', 'delete')
+Create Trigger On contorc For Delete As RefInt(Id, 'contorc', 'delete')
+Create Trigger On grupo For Delete As RefInt(Id, 'grupo', 'delete')
+Create Trigger On produto For Delete As RefInt(Id, 'produto', 'delete')
+Create Trigger On subgrupo For Delete As RefInt(Id, 'subgrupo', 'delete')
+Create Trigger On fab For Delete As RefInt(Id, 'fab', 'delete')
+Create Trigger On compra For Delete As RefInt(Id, 'compra', 'delete')
+Create Trigger On cheque For Delete As RefInt(Id, 'cheque', 'delete')
+Create Trigger On contas For Delete As RefInt(Id, 'contas', 'delete')
+Create Trigger On usugru For Delete As RefInt(Id, 'usugru', 'delete')
+Create Trigger On admcartao For Delete As RefInt(Id, 'admcartao', 'delete')
+Create Trigger On cadcart For Delete As RefInt(Id, 'cadcart', 'delete')
+*! Fim da criação de Triggers
+******************************************************************************
+
+*! Inserir data e hora em que o sistema foi iniciado pela primeira vez
+*! e também a data em que o sistema irá espirar.
+Insert Into config (tadate, linkac) Values (Date(), 'http://cybersis.com.br/cgs/upd/free/banner.ini')
+*!--------------------------------------------------------------------------!*
+
+If _InsData == 'Server' Then
+	Insert Into usugru (descricao) Values ('ADMINISTRADOR')
+	Insert Into cademp (razao) Values ('CYBERSIS INFORMÁTICA LTDA')
+	Insert Into tparam (campo, valor) Values ('CabecaLinha1', 'CGS - SISTEMA DE GESTÃO COMERCIAL')
+	Insert Into tparam (campo, valor) Values ('CabecaLinha2', 'RUA PORTO RICO, 377 - SITIO CERCADO - CURITIBA-PR - FONE:(41)3289-5784')
+	Insert Into tparam (campo, valor) Values ('RodapeLinha1', 'ACEITAMOS TODOS OS CARTÕES DE CRÉDITO')
+	Insert Into tparam (campo, valor) Values ('RodapeLinha2', 'OBRIGADO PELA PREFERÊNCIA - VOLTE SEMPRE')
+	Insert Into tparam (campo, valor) Values ('TipoComissaoVenda', 'Venda')
+	Insert Into tparam (campo, valor) Values ('PercentualComissaoVenda', '0,00')
+	Insert Into tparam (campo, valor) Values ('CentroDeCustoPadraoParaVenda', '0')
+	Insert Into tparam (campo, valor) Values ('TipoDeDocumentoPadraoParaVenda', '0')
+	Insert Into tparam (campo, valor) Values ('CentroDeCustoPadraoParaCompensarCheque', '0')
+	Insert Into tparam (campo, valor) Values ('ContaBancariaPadraoParaCompensarCheque', '0')
+	Insert Into tparam (campo, valor) Values ('TipoDeDocumentoPadraoParaCompensarCheque', '0')
+	Insert Into tparam (campo, valor) Values ('ReimprimirRotulo', '0')
+	Insert Into tparam (campo, valor) Values ('CodigoPadrao', '1')
+	Insert Into tparam (campo, valor) Values ('QuantidadeDeProdutosDaNotaFiscal', '0')
+	Insert Into tparam (campo, valor) Values ('ImpressoraCalibrada', 'F')
+	Insert Into tparam (campo, valor) Values ('AutoPecas', '0')
+	Insert Into tparam (campo, valor) Values ('Mecanica', '0')
+	Insert Into tparam (campo, valor) Values ('LocalPagamentoBoleto', '')
+	Insert Into tparam (campo, valor) Values ('CedenteBoleto', '')
+	Insert Into tparam (campo, valor) Values ('CodigoCedenteBoleto', '')
+	Insert Into tparam (campo, valor) Values ('EspecieDocumentoBoleto', '')
+	Insert Into tparam (campo, valor) Values ('AceiteBoleto', '')
+	Insert Into tparam (campo, valor) Values ('EspecieMoedaBoleto', '')
+	Insert Into tparam (campo, valor) Values ('InstrucoesBoleto', '')
+	Insert Into tparam (campo, valor) Values ('QuantidadeDeCopiasDoRecibo', '1')
+	Insert Into tparam (campo, valor) Values ('BloquearVendaEstoqueNegativo', '0')
+	Insert Into tparam (campo, valor) Values ('ClienteComRestricaoDeCredito', '1')
+	Insert Into tparam (campo, valor) Values ('TextoResponsabilidadeSobreEquipamentoOS', '')
+	Insert Into tparam (campo, valor) Values ('GarantiaOS', '')
+	Insert Into tparam (campo, valor) Values ('DescontoMaximo', '0,00')
+	Insert Into tparam (campo, valor) Values ('MeiaPaginaOS', '0')
+	Insert Into tparam (campo, valor) Values ('PagarComissaoSobreProduto', '0')
+	Insert Into tparam (campo, valor) Values ('FonteImpressaoRecibo', '12,0')
+	Insert Into tparam (campo, valor) Values ('DuasCopiasPorPagina', '0')
+	Insert Into tparam (campo, valor) Values ('HabilitarPedidoExpresso', '0')
+	Insert Into tparam (campo, valor) Values ('VendedorPadraoPedidoExpresso', '0')
+	Insert Into tparam (campo, valor) Values ('ImprimirReciboPedido', '3')
+	Insert Into tparam (campo, valor) Values ('FormatoTextoOS', '0')
+	Insert Into tparam (campo, valor) Values ('CaminhoLogotipoOS', SYSTEM_PATH + 'imagens\jpg\logo_cybersis.jpg')
+	Insert Into cliente (razao, nabrev, tipo, datacad, estciv, sexo, situ) Values ('CONSUMIDOR', 'CONSUMIDOR', 'Física', Date(), 'Solteiro ( a )', 'Masculino', 'Ativo')
+	Insert Into contorc (Nome) Values ('VENDA EM DINHEIRO')
+	Insert Into contorc (Nome) Values ('TROCA DE TICKET')
+	Insert Into contorc (Nome) Values ('COMPENSAÇÃO DE CHEQUE')
+	Insert Into contorc (Nome) Values ('RECEBIMENTO DE CARTÃO')
+	Insert Into contorc (Nome) Values ('RECEBIMENTO DE BOLETO')
+	Insert Into contorc (Nome) Values ('RECEBIMENTO DE CREDIÁRIO')
+	Insert Into contorc (Nome) Values ('DEVOLUÇÃO DE CHEQUE')
+	Insert Into fornec (razao, nabrev, datacad, tipo, situ, obs) Values ('GERAL', 'GERAL', Date(), 'Jurídica', 'Ativo', 'FORNECEDOR GERAL' + Chr(13) + 'USADO PARA DÉBITOS DIVERSOS COMO:' + Chr(13) + '	1 - CHEQUES DEVOLVIDOS' + Chr(13) + '	2 - MATERIAL DE ESCRITÓRIO' + Chr(13) + '	3 - COMBUSTÍVEL' + Chr(13) + '	4 - SUPERMERCADO' + Chr(13) + '	ENTRE OUTROS ITENS DIVERSOS')
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('000', 'Tributada integralmente', 18.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('010', 'Tributada e com cobrança do ICMS por substituição tributária', 18.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('020', 'Com redução na base de calculo', 0.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('030', 'Isenta ou não tributada e com cobrança do ICMS por substituição tributária', 0.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('040', 'Isenta', 0.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('041', 'Não tributada', 0.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('050', 'Suspenção', 0.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('051', 'Diferimento', 0.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('060', 'ICMS cobrado anteriormente por substituição tributária', 0.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('070', 'Com redução na base de cálculo e cob. do ICMS por substituição tributária', 0.00)
+	Insert Into situtrib (codigo, descricao, icmspad) Values ('090', 'Outras', 0.00)
+	Insert Into icms(origem, destino, icms) Values('AC', 'AC', 0)
+	Insert Into icms(origem, destino, icms) Values('AC', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('AC', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'AL', 0)
+	Insert Into icms(origem, destino, icms) Values('AL', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('AL', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'AM', 0)
+	Insert Into icms(origem, destino, icms) Values('AM', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('AM', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'AP', 0)
+	Insert Into icms(origem, destino, icms) Values('AP', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('AP', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'BA', 0)
+	Insert Into icms(origem, destino, icms) Values('BA', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('BA', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'CE', 0)
+	Insert Into icms(origem, destino, icms) Values('CE', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('CE', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'DF', 0)
+	Insert Into icms(origem, destino, icms) Values('DF', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('DF', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'ES', 0)
+	Insert Into icms(origem, destino, icms) Values('ES', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('ES', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'GO', 0)
+	Insert Into icms(origem, destino, icms) Values('GO', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('GO', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'MA', 0)
+	Insert Into icms(origem, destino, icms) Values('MA', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('MA', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'MT', 0)
+	Insert Into icms(origem, destino, icms) Values('MT', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('MT', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'MS', 0)
+	Insert Into icms(origem, destino, icms) Values('MS', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('MS', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('MG', 'AC', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'AL', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'AM', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'AP', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'BA', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'CE', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'DF', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'ES', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'GO', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'MA', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'MT', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'MS', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'MG', 0)
+	Insert Into icms(origem, destino, icms) Values('MG', 'PA', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'PB', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('MG', 'PE', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'PI', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'RN', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('MG', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('MG', 'RO', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'RR', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('MG', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('MG', 'SE', 7)
+	Insert Into icms(origem, destino, icms) Values('MG', 'TO', 7)
+	Insert Into icms(origem, destino, icms) Values('PA', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'PA', 0)
+	Insert Into icms(origem, destino, icms) Values('PA', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('PA', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'PB', 0)
+	Insert Into icms(origem, destino, icms) Values('PB', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('PB', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('PR', 'AC', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'AL', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'AM', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'AP', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'BA', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'CE', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'DF', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'ES', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'GO', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'MA', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'MT', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'MS', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('PR', 'PA', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'PB', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'PR', 18)
+	Insert Into icms(origem, destino, icms) Values('PR', 'PE', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'PI', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'RN', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('PR', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('PR', 'RO', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'RR', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('PR', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('PR', 'SE', 7)
+	Insert Into icms(origem, destino, icms) Values('PR', 'TO', 7)
+	Insert Into icms(origem, destino, icms) Values('PE', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'PE', 0)
+	Insert Into icms(origem, destino, icms) Values('PE', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('PE', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'PI', 0)
+	Insert Into icms(origem, destino, icms) Values('PI', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('PI', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'RN', 0)
+	Insert Into icms(origem, destino, icms) Values('RN', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('RN', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('RS', 'AC', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'AL', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'AM', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'AP', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'BA', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'CE', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'DF', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'ES', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'GO', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'MA', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'MT', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'MS', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('RS', 'PA', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'PB', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('RS', 'PE', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'PI', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'RN', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'RS', 0)
+	Insert Into icms(origem, destino, icms) Values('RS', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('RS', 'RO', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'RR', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('RS', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('RS', 'SE', 7)
+	Insert Into icms(origem, destino, icms) Values('RS', 'TO', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'AC', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'AL', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'AM', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'AP', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'BA', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'CE', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'DF', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'ES', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'GO', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'MA', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'MT', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'MS', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'PA', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'PB', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'PE', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'PI', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'RN', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'RJ', 0)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'RO', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'RR', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'SE', 7)
+	Insert Into icms(origem, destino, icms) Values('RJ', 'TO', 7)
+	Insert Into icms(origem, destino, icms) Values('RO', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'RO', 0)
+	Insert Into icms(origem, destino, icms) Values('RO', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('RO', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'RR', 0)
+	Insert Into icms(origem, destino, icms) Values('RR', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('RR', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('SC', 'AC', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'AL', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'AM', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'AP', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'BA', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'CE', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'DF', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'ES', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'GO', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'MA', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'MT', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'MS', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('SC', 'PA', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'PB', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('SC', 'PE', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'PI', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'RN', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('SC', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('SC', 'RO', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'RR', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'SC', 0)
+	Insert Into icms(origem, destino, icms) Values('SC', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('SC', 'SE', 7)
+	Insert Into icms(origem, destino, icms) Values('SC', 'TO', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'AC', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'AL', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'AM', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'AP', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'BA', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'CE', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'DF', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'ES', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'GO', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'MA', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'MT', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'MS', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('SP', 'PA', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'PB', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('SP', 'PE', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'PI', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'RN', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('SP', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('SP', 'RO', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'RR', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('SP', 'SP', 0)
+	Insert Into icms(origem, destino, icms) Values('SP', 'SE', 7)
+	Insert Into icms(origem, destino, icms) Values('SP', 'TO', 7)
+	Insert Into icms(origem, destino, icms) Values('SE', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('SE', 'SE', 0)
+	Insert Into icms(origem, destino, icms) Values('SE', 'TO', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'AC', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'AL', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'AM', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'AP', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'BA', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'CE', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'DF', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'ES', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'GO', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'MA', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'MT', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'MS', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'MG', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'PA', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'PB', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'PR', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'PE', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'PI', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'RN', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'RS', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'RJ', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'RO', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'RR', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'SC', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'SP', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'SE', 12)
+	Insert Into icms(origem, destino, icms) Values('TO', 'TO', 0)
+
+	Insert Into confbol (descricao) Values ('Local de Pagamento')
+	Insert Into confbol (descricao) Values ('Vencimento')
+	Insert Into confbol (descricao) Values ('Cedente')
+	Insert Into confbol (descricao) Values ('Código Cedente')
+	Insert Into confbol (descricao) Values ('Data do Documento')
+	Insert Into confbol (descricao) Values ('Número do Documento')
+	Insert Into confbol (descricao) Values ('Espécie do Documento')
+	Insert Into confbol (descricao) Values ('Aceite')
+	Insert Into confbol (descricao) Values ('Data do Processamento')
+	Insert Into confbol (descricao) Values ('Espécie da Moeda')
+	Insert Into confbol (descricao) Values ('Quantidade')
+	Insert Into confbol (descricao) Values ('Valor')
+	Insert Into confbol (descricao) Values ('Valor do Documento')
+	Insert Into confbol (descricao) Values ('Instruções')
+	Insert Into confbol (descricao) Values ('Sacado')
+	Insert Into confbol (descricao) Values ('Cnpj')
+	Insert Into confbol (descricao) Values ('Endereço')
+	Insert Into confbol (descricao) Values ('Sacador')
+	Insert Into confbol (descricao) Values ('Código de Baixa')
+EndIf
+*! Fim da inserção de dados necessários para o funcionamento
+******************************************************************************
+
+Close Database All
+Close Tables All
+Chdir &SYSTEM_PATH.
+If _InsData != 'Backup' Then
+	Wait Window "Processo finalizado com sucesso!" Nowait
+Endif

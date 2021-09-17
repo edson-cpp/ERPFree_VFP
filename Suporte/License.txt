@@ -1,0 +1,69 @@
+TERMO DE LICENÇA DE USO
+-----------------------
+
+IMPORTANTE - LEIA COM ATENÇÃO
+
+Leia atentamente e entenda todos os direitos e restrições descritos neste
+documento. Solicitamos que você verifique e aceite ou não os termos contidos
+neste documento. O SOFTWARE, identificado acima, não deverá ser instalado em
+seu computador até que você aceite os termos aqui estabelecidos.
+
+LICENÇA DO SOFTWARE
+
+Este SOFTWARE é protegido por leis de copyright e tratados internacionais
+relativos a direitos autorais, bem como por outras legislações e tratados
+sobre propriedade intelectual.
+
+1. CONCESSÃO DA LICENÇA
+
+Este documento lhe concede os direitos a seguir:
+
+-  Instalação e Uso. Você poderá instalar e utilizar um número ilimitado de
+   cópias deste SOFTWARE sem restrições de tempo ou funcionalidades.
+
+2. OUTROS DIREITOS E LIMITAÇÕES
+
+-  É vedada a engenharia reversa, descompilação ou desmontagem do SOFTWARE.
+-  Serviços de Suporte. A Cybersis oferece um serviço de suporte gratuito
+   através do grupo no facebook: https://www.facebook.com/groups/erpelite/,
+   não há qualquer tipo de compromisso ou garantia por parte da empresa
+   em resolver o problema apresentado, a comunidade está disponível apenas
+   para auxiliar os usuários nas questões referentes ao sistema, sendo que,
+   os próprios usuários poderão ajudar uns aos outros.
+-  As atualizações de versões serão disponibilizadas no site da empresa com
+   um roteiro de procedimento.
+-  É de inteira responsabilidade do usuário realizar cópias de segurança 
+   regularmente, já que essa é a única maneira de se restaurar informações
+   já cadastradas, em caso de falha de hardware, vírus, exclusão acidental, etc.
+
+3. DIREITOS AUTORAIS
+
+   O software oferecido gratuitamente na web, é de propriedade de
+   Cybersis Informática Ltda, inscrito no CNPJ sob o número 11.122.386/0001-20.
+   Nenhum direito sobre a propriedade intelectual do SOFTWARE é transferido ao 
+   usuário.
+   É PROIBIDA a alteração do software CGS, de qualquer forma, incluindo 
+   mudanças ou remoções de qualquer mensagens ou janelas, bem como traduzir, 
+   adaptar, fazer engenharia reversa, desmontar ou criar derivações baseadas 
+   no produto.
+
+4. GARANTIA
+   Este programa é distribuído na expectativa de ser útil, mas SEM QUALQUER GARANTIA;
+   sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou de ADEQUAÇÃO A QUALQUER PROPÓSITO
+   EM PARTICULAR.
+
+5. RESPONSABILIDADE POR DANOS CAUSADOS
+
+  Em nenhuma circunstância, a Cybersis ou seus revendedores serão
+  responsáveis por quaisquer danos (incluindo, sem limitação, lucros cessantes,
+  danos causados por interrupção de transações comerciais, perda de informações
+  comerciais ou qualquer outra perda financeira) decorrente do uso ou da
+  incapacidade de usar deste produto, ainda que a Cybersis tenha sido
+  alertada quanto a possibilidade de ocorrência de tais danos. 
+
+Cybersis Informática Ltda
+CNPJ: 11.122.386/0001-20
+Rua Porto Rico, 377 - 81.925-415
+Curitba/PR - (41)3289-5784 - (41)8438-0605
+http://www.cybersis.com.br
+suporte@cybersis.com.br

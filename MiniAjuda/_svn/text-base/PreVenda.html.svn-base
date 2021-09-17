@@ -1,0 +1,260 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="PreVenda_arquivos/filelist.xml">
+<title>Procedimentos básicos</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Edson</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Edson</o:LastAuthor>
+  <o:Revision>13</o:Revision>
+  <o:TotalTime>56</o:TotalTime>
+  <o:Created>2007-09-03T04:00:00Z</o:Created>
+  <o:LastSaved>2008-04-20T02:15:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>188</o:Words>
+  <o:Characters>1020</o:Characters>
+  <o:Lines>8</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1206</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:305554105;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1327026126 68550671 68550681 68550683 68550671 68550681 68550683 68550671 68550681 68550683;}
+@list l0:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:1301183416;
+	mso-list-template-ids:1700135268;}
+@list l2
+	{mso-list-id:1431124181;
+	mso-list-template-ids:402807492;}
+@list l3
+	{mso-list-id:1831017173;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2003643276 68550671 68550681 68550683 68550671 68550681 68550683 68550671 68550681 68550683;}
+@list l3:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'>Procedimentos básicos.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt'>Botões:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt'><span style='mso-spacerun:yes'>      </span>Pré-Venda
+/ Orçamento<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Confirmar – Finaliza a pré-venda ou orçamento
+     conforme selecionado no campo <i style='mso-bidi-font-style:normal'>Tipo.<o:p></o:p></i></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Cancelar – Cancela operação atual.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Alterar – Seleciona a grade de produtos permitindo
+     a exclusão ou diminuição na quantidade de um item que já tenha sido
+     inserido.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Fechar – Fecha a tela <i style='mso-bidi-font-style:
+     normal'>Pré-Venda / Orçamento.<o:p></o:p></i></span></li>
+</ol>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt'>Funções:<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>No campo código do cliente pressione <i
+     style='mso-bidi-font-style:normal'>F5</i> ou <i style='mso-bidi-font-style:
+     normal'>Clique Duplo</i> no mouse para localizar por nome.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>No campo código do vendedor pressione <i
+     style='mso-bidi-font-style:normal'>F5</i> ou <i style='mso-bidi-font-style:
+     normal'>Clique Duplo</i> no mouse para localizar por nome.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>No campo código do produto pressione <i
+     style='mso-bidi-font-style:normal'>F5</i> ou <i style='mso-bidi-font-style:
+     normal'>Clique Duplo</i> no mouse para localizar por descrição.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>A tecla <i style='mso-bidi-font-style:normal'>F9 </i>permite
+     conceder desconto na pré-venda (o desconto é concedido mediante autenticação
+     – senha – de pessoa autorizada)<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Na grade de produtos (depois de pressionado o
+     botão Alterar) use - (menos) para subtrair <span class=GramE>1</span> na
+     quantidade do produto selecionado e use <i style='mso-bidi-font-style:
+     normal'>Del</i> para excluí-lo da grade.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Os botões tem atalhos para <span class=GramE>agilizar</span>
+     os procedimentos. Ex. Botão <u>F</u>echar, o F de Fechar é sublinhado,
+     isso indica que esta tecla combinada com a tecla de <span class=SpellE><i
+     style='mso-bidi-font-style:normal'>Alt</i></span> aciona este botão, isto
+     funciona para todos os botões. Pressionar <span class=SpellE>Alt</span>+F
+     simultaneamente é o mesmo que clicar no botão Fechar.<o:p></o:p></span></li>
+</ol>
+
+</div>
+
+</body>
+
+</html>

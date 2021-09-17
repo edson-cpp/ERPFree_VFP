@@ -1,0 +1,320 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Frente_arquivos/filelist.xml">
+<title>Procedimentos básicos</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Edson</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>edson</o:LastAuthor>
+  <o:Revision>13</o:Revision>
+  <o:TotalTime>54</o:TotalTime>
+  <o:Created>2007-09-03T04:00:00Z</o:Created>
+  <o:LastSaved>2008-12-21T04:33:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>221</o:Words>
+  <o:Characters>1198</o:Characters>
+  <o:Lines>9</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1417</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:302008452;
+	mso-list-template-ids:1731648800;}
+@list l1
+	{mso-list-id:305554105;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1327026126 68550671 68550681 68550683 68550671 68550681 68550683 68550671 68550681 68550683;}
+@list l1:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:815953583;
+	mso-list-template-ids:-1242006206;}
+@list l3
+	{mso-list-id:1272085906;
+	mso-list-template-ids:822407100;}
+@list l4
+	{mso-list-id:1371144689;
+	mso-list-type:hybrid;
+	mso-list-template-ids:653970362 68550671 68550681 68550683 68550671 68550681 68550683 68550671 68550681 68550683;}
+@list l4:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5
+	{mso-list-id:1831017173;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2003643276 68550671 68550681 68550683 68550671 68550681 68550683 68550671 68550681 68550683;}
+@list l5:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'>Procedimentos básicos.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt'>Botões:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt'><span style='mso-spacerun:yes'>      </span>Frente de
+Caixa<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Novo – Inicia nova venda.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Confirmar – Abre a tela <i style='mso-bidi-font-style:
+     normal'>Finalizando a Venda<o:p></o:p></i></span></li>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Cancelar – Cancela venda em aberto.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Alterar – Seleciona a grade de produtos
+     permitindo a exclusão ou diminuição na quantidade de um item que já tenha
+     sido inserido.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Fechar – Fecha a tela <i style='mso-bidi-font-style:
+     normal'>Frente de Caixa.<o:p></o:p></i></span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:11.0pt'>Fechamento de Venda<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Confirmar – Finaliza a venda.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Voltar – Esconde a tela de fechamento e volta
+     para a tela de <i style='mso-bidi-font-style:normal'>Frente de Caixa</i>
+     mantendo as informações do fechamento.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Cancelar – Cancela o fechamento da venda.<o:p></o:p></span></li>
+</ol>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt'>Funções:<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>No campo código do produto pressione <i
+     style='mso-bidi-font-style:normal'>F5</i> ou <i style='mso-bidi-font-style:
+     normal'>Clique Duplo</i> para localizar por descrição.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>No campo código do produto pressione <i
+     style='mso-bidi-font-style:normal'>F6</i> para alterar a descrição do <span
+     class=GramE>produto(</span>somente para a venda atual, não altera o
+     cadastro).<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Pressione <i style='mso-bidi-font-style:normal'>F7
+     </i>para alternar entre os códigos do produto: Barras, interno ou <span
+     class=SpellE>sequencial</span>. Obs.: Esta alteração somente é válida para
+     a sessão atual, para alteração permanente <span class=GramE>vá em</span> <i
+     style='mso-bidi-font-style:normal'>Configurações =&gt; aba Frente de
+     Caixa.</i><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Na grade de produtos (depois de pressionado o
+     botão Alterar) use - (menos) para subtrair <span class=GramE>1</span> na
+     quantidade do produto selecionado e use <i style='mso-bidi-font-style:
+     normal'>Del</i> para excluí-lo da grade.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo9;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Os botões tem atalhos para <span class=GramE>agilizar</span>
+     os procedimentos. Ex. Botão <u>F</u>echar, o F de Fechar é sublinhado,
+     isso indica que esta tecla combinada com a tecla de <span class=SpellE><i
+     style='mso-bidi-font-style:normal'>Alt</i></span> aciona este botão, isto
+     funciona para todos os botões. Pressionar <span class=SpellE>Alt</span>+F
+     simultaneamente é o mesmo que clicar no botão Fechar.<o:p></o:p></span></li>
+</ol>
+
+</div>
+
+</body>
+
+</html>

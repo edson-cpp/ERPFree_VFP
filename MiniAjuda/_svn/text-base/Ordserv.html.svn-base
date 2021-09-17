@@ -1,0 +1,341 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Ordserv_arquivos/filelist.xml">
+<title>Procedimentos básicos</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:106436788;
+	mso-list-template-ids:2064912668;}
+@list l1
+	{mso-list-id:183370248;
+	mso-list-template-ids:1296192106;}
+@list l2
+	{mso-list-id:305932531;
+	mso-list-template-ids:1107174514;}
+@list l2:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:1227107495;
+	mso-list-template-ids:-1178331262;}
+@list l3:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Procedimentos básicos.</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>Botões:</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ordem de Serviço<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Novo/Salvar – Cria uma nova ordem. / Grava as
+     informações do registro.</span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Alterar/Cancelar – Habilita os campos para
+     alterações no registro selecionado. / Cancela o cadastro corrente.</span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Localizar – Localiza a partir da lista de
+     registros.</span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Concluir – Finaliza a OS.</span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     class=GramE><span style='font-size:11.0pt'>Primeiro(</span></span><span
+     style='font-size:11.0pt'> |&lt; ) – Navega para o primeiro registro.</span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     class=GramE><span style='font-size:11.0pt'>Anterior(</span></span><span
+     style='font-size:11.0pt'> &lt; ) – Navega para o registro anterior.</span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     class=GramE><span style='font-size:11.0pt'>Próximo(</span></span><span
+     style='font-size:11.0pt'> &gt; ) – Navega para o próximo registro.</span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     class=GramE><span style='font-size:11.0pt'>Último(</span></span><span
+     style='font-size:11.0pt'> &gt;| ) – Navega para o último registro.</span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Imprimir – Imprime a OS atual.</span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Fechar – Fecha a tela de cadastro<i>.</i></span></li>
+</ol>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt'>Funções:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span style='font-size:11.0pt'>Dados
+Gerais<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt;
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>    </span>Pressione
+F5 ou Clique Duplo no cliente para localizar por nome/razão social.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt;
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>    </span>Pressione
+F5 ou Clique Duplo no atendente para localizar por nome.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b><span style='font-size:11.0pt'>Peças
+e Serviços<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt;
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>    </span>Pressione
+F5 ou Clique Duplo para localizar o produto.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='mso-spacerun:yes'>    </span></b><span style='font-size:
+11.0pt'>Na grade de produtos use - (menos) para subtrair <span class=GramE>1</span>
+na quantidade do produto selecionado e use <i style='mso-bidi-font-style:normal'>Del</i>
+para excluí-lo da grade.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>Em <i style='mso-bidi-font-style:normal'>Serviço,
+</i>descreva o serviço, o valor e pressione <span class=SpellE><i
+style='mso-bidi-font-style:normal'>Enter</i></span><i style='mso-bidi-font-style:
+normal'>.<o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><i style='mso-bidi-font-style:
+normal'><span style='font-size:11.0pt'><span style='mso-spacerun:yes'>   
+</span></span></i><span style='font-size:11.0pt'>Para excluir um serviço já
+inserido selecione-o na lista e pressione a tecla <span class=SpellE><i
+style='mso-bidi-font-style:normal'>Delete</i></span><i style='mso-bidi-font-style:
+normal'>.</i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:11.0pt'>Histórico<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>Descreva o histórico desejado e pressione <span
+class=SpellE><i style='mso-bidi-font-style:normal'>Enter</i></span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>Para alterar um item da lista selecione-o e
+clique no botão <i style='mso-bidi-font-style:normal'>Alterar.<o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>Para excluir um item da lista selecione-o e
+clique no botão <i style='mso-bidi-font-style:normal'>Excluir<o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><i style='mso-bidi-font-style:
+normal'><span style='font-size:11.0pt'><span style='mso-spacerun:yes'>   
+</span></span></i><span style='font-size:11.0pt'>O botão <i style='mso-bidi-font-style:
+normal'>Inserir pendência </i>habilita o campo para inserir uma pendência no
+histórico e altera o Status da ordem para pendente.<i style='mso-bidi-font-style:
+normal'><o:p></o:p></i></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:11.0pt'>Conclusão<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt;
+mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>    </span>Pressione
+F5 ou Clique Duplo no técnico para localizar por nome.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>Informe os valores de conclusão da ordem
+para finalizá-la, ao salvar será questionado quanto à finalização da mesma,
+finalizando-se a partir do botão <i style='mso-bidi-font-style:normal'>Concluir
+</i>a pergunta não será feita.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>ATENÇÃO: Uma ordem depois de finalizada não
+pode mais ser alterada.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+normal'><o:p>&nbsp;</o:p></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>No campo <i style='mso-bidi-font-style:normal'>Ordem
+     de Serviço <span class=SpellE>Nº</span></i> pressione <i>F5</i> ou <i>Clique
+     Duplo</i> para localizar por cliente ou equipamento/veículo.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     class=SpellE><span style='font-size:11.0pt'>Ctrl</span></span><span
+     style='font-size:11.0pt'> + <span class=SpellE>Home</span> – Navega para o
+     primeiro registro.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     class=SpellE><span style='font-size:11.0pt'>Ctrl</span></span><span
+     style='font-size:11.0pt'> + <span class=SpellE>Page</span> <span
+     class=SpellE>Up</span> – Navega para o registro anterior.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     class=SpellE><span style='font-size:11.0pt'>Ctrl</span></span><span
+     style='font-size:11.0pt'> + <span class=SpellE>Page</span> <span
+     class=SpellE>Down</span> – Navega para o próximo registro.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     class=SpellE><span style='font-size:11.0pt'>Ctrl</span></span><span
+     style='font-size:11.0pt'> + <span class=SpellE>End</span> – Navega para o
+     último registro.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     class=SpellE><span style='font-size:11.0pt'>Shift</span></span><span
+     style='font-size:11.0pt'> + <span class=SpellE>Page</span> <span
+     class=SpellE>Up</span> – Navega para a aba anterior no <span class=SpellE>pageframe</span>.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     class=SpellE><span style='font-size:11.0pt'>Shift</span></span><span
+     style='font-size:11.0pt'> + <span class=SpellE>Page</span> <span
+     class=SpellE>Down</span> – Navega para a próxima aba no <span
+     class=SpellE>pageframe</span>.</span></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Os botões tem atalhos para <span class=GramE>agilizar</span>
+     os procedimentos. Ex. Botão <u>F</u>echar, o F de Fechar é sublinhado,
+     isso indica que esta tecla combinada com a tecla de <span class=SpellE><i>Alt</i></span>
+     aciona este botão, isto funciona para todos os botões. Pressionar <span
+     class=SpellE>Alt</span>+F simultaneamente é o mesmo que clicar no botão
+     Fechar.</span></li>
+</ol>
+
+</div>
+
+</body>
+
+</html>

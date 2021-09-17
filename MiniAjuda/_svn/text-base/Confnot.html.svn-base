@@ -1,0 +1,262 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Confnot_arquivos/filelist.xml">
+<title>Procedimentos básicos</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Edson</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>edson</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>152</o:TotalTime>
+  <o:Created>2008-11-04T00:44:00Z</o:Created>
+  <o:LastSaved>2008-11-04T01:05:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>216</o:Words>
+  <o:Characters>1169</o:Characters>
+  <o:Lines>9</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1383</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:164828653;
+	mso-list-template-ids:-868970714;}
+@list l1
+	{mso-list-id:305554105;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1327026126 68550671 68550681 68550683 68550671 68550681 68550683 68550671 68550681 68550683;}
+@list l1:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:567691584;
+	mso-list-template-ids:2103222212;}
+@list l3
+	{mso-list-id:1831017173;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2003643276 68550671 68550681 68550683 68550671 68550681 68550683 68550671 68550681 68550683;}
+@list l3:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt'>Procedimentos básicos.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt'>Botões:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt'><span style='mso-spacerun:yes'>      </span>Configuração
+de layout da nota fiscal<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Permite configurar os campos da nota fiscal para
+     impressão.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Tire as medidas da borda da letra a ser impressa
+     e indique os valores nos campos correspondentes a linha e coluna.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Linha = Medida da borda superior do papel até a
+     borda superior da letra.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Coluna = Medida da borda esquerda do papel até a
+     borda esquerda da letra.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Valores em milímetros com <span class=GramE>4</span>
+     casas decimais para maior precisão.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     class=GramE><span style='font-size:11.0pt'>Após</span></span><span
+     style='font-size:11.0pt'> configurada toda a NF imprima uma página de
+     teste para certificar-se de que os campos estão todos com suas medidas
+     corretas, e só então imprimir a nota fiscal em si.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Os itens descrição, classificação fiscal, situação
+     tributária, unidade, quantidade, valor unitário, valor total, alíquota de <span
+     class=SpellE>icms</span>, alíquota de <span class=SpellE>ipi</span> e
+     valor de <span class=SpellE>ipi</span> do produto não permitem a
+     configuração da linha, estes itens obedecem <span class=GramE>a</span>
+     mesma configuração da linha do código do produto.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Salvar e sair – Salva as alterações feitas e sai.<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Sair sem salvar – Sai da tela sem salvar as
+     alterações<i style='mso-bidi-font-style:normal'>.</i><o:p></o:p></span></li>
+</ol>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt'>Funções:<o:p></o:p></span></b></p>
+
+<ol style='margin-top:0cm' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Use a tecla <span class=GramE>[ </span><span
+     class=SpellE>Enter</span> ] para navegar para o próximo item de
+     configuração<span style='color:black'>.</span><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo6;tab-stops:list 36.0pt'><span
+     style='font-size:11.0pt'>Os botões tem atalhos para <span class=GramE>agilizar</span>
+     os procedimentos. Ex. Botão <u>F</u>echar, o F de Fechar é sublinhado,
+     isso indica que esta tecla combinada com a tecla de <span class=SpellE><i
+     style='mso-bidi-font-style:normal'>Alt</i></span> aciona este botão, isto
+     funciona para todos os botões. Pressionar <span class=SpellE>Alt</span>+F
+     simultaneamente é o mesmo que clicar no botão Fechar.<o:p></o:p></span></li>
+</ol>
+
+</div>
+
+</body>
+
+</html>

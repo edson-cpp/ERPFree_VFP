@@ -118,15 +118,28 @@ Define Class _SmallFunc As Custom
 
 	Function ScreenResize
 		If _vfp.StartMode # 0 Then
-			_vfp.Forms.Item('FRMMAIN').Width = _Screen.Width - 250
-			_vfp.Forms.Item('FRMMAIN').Height = _Screen.Height
-			_vfp.Forms.Item('FRMMAIN').lvwMain.Refresh
-			_vfp.Forms.Item('BANNER').Height = _Screen.Height
-			_vfp.Forms.Item('BANNER').Left = _vfp.Forms.Item('FRMMAIN').Width
-			_vfp.Forms.Item('BANNER').Top = 0
+			If This.GetScreenForm('FRMMAIN') Then
+				_vfp.Forms.Item('FRMMAIN').Width = _Screen.Width - 250
+				_vfp.Forms.Item('FRMMAIN').Height = _Screen.Height
+				_vfp.Forms.Item('FRMMAIN').lvwMain.Refresh
+			EndIf
+			If This.GetScreenForm('BANNER') Then
+				_vfp.Forms.Item('BANNER').Height = _Screen.Height
+				_vfp.Forms.Item('BANNER').Left = _vfp.Forms.Item('FRMMAIN').Width
+				_vfp.Forms.Item('BANNER').Top = 0
+			EndIf
 		Endif
 	Endfunc
 
+	Function GetScreenForm(_Valor As String)
+		For i = 1 To _vfp.Forms.Count
+			If _vfp.Forms.Item(i).Name == _Valor Then
+				Return .T.
+			EndIf
+		EndFor
+		Return .F.
+	EndFunc
+	
 	Function DownFiles
 		Try
 			Wait Windows 'Executando verificação de rotina, por favor aguarde!' Nowait
